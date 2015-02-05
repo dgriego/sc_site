@@ -1,0 +1,31 @@
+.fixed_nav {
+    @extend .fixed;
+    @extend .row;
+    max-width: none;
+    background: #ffffff;
+
+    .nav_container {
+        @extend .row;
+        max-width: 65.5rem;
+        margin: 0 auto;
+        padding: rem-calc(10 0);
+
+        h2 {
+            float: left;
+            font-family: "Oswald", Helvetica, Roboto, Arial, sans-serif;
+            margin: 0;
+            letter-spacing: 1rem;
+        }
+
+        .list_container {
+            @include inline-list;
+            @extend .right;
+            margin:0;
+
+            li {
+                padding: rem-calc(13 30);
+                margin: 0;
+            }
+        }
+    }
+}

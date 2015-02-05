@@ -1,0 +1,50 @@
+.fixed_footer {
+    @extend .fixed;
+    @extend .row;
+    bottom: 0;
+    top: inherit;
+    max-width: none;
+    background: #ffffff;
+    opacity: 0.9;
+
+    .footer_container {
+        @extend .row;
+        max-width: 65.5rem;
+        margin: 0 auto;
+        padding: 0;
+
+        .contact-info {
+            @extend .large-5;
+            @extend .columns;
+
+            .card {
+                @extend .vcard;
+                width: 90%;
+                margin: 0;
+            }
+        }
+
+        .icon_footer_bar {
+            @extend .large-7;
+            @extend .columns;
+        }
+    }
+
+    .icon_row {
+        @include icon-bar(
+            // $bar-bg: $icon-bar-bg,
+            // $bar-font-color: $icon-bar-font-color,
+            // $bar-hover-color,
+            // $bar-icon-color: $icon-bar-icon-color,
+            // $bar-active-color,
+            // $padding,
+            // $font-size,
+            // $icon-size,
+            // $image-width,
+            // $image-height,
+            // $base-style: true,
+            // $disabled: false
+        );
+    }
+}
+

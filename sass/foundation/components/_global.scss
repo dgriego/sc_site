@@ -249,7 +249,7 @@ $warning-color: #f08a24 !default;   // carrot
 $info-color: #a0d3e8 !default;      // cornflower
 
 // We use these to define default font stacks
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !default;
+$font-family-sans-serif: "Raleway", Helvetica, Roboto, Arial, sans-serif !default;
 $font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif !default;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace !default;
 $font-header: "Oswald", Helvetica, Roboto, Arial, sans-serif;
@@ -259,8 +259,8 @@ $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
 
 // We use these to control various global styles
-$body-bg: #fff !default;
-$body-font-color: #222 !default;
+$body-bg: $black !default;
+$body-font-color: $white !default;
 $body-font-family: $font-family-sans-serif !default;
 $body-font-weight: $font-weight-normal !default;
 $body-font-style: normal !default;
@@ -297,19 +297,41 @@ $include-html-global-classes: $include-html-classes !default;
 $column-gutter: rem-calc(30) !default;
 
 // Media Query Ranges
-$small-range: (0, 40em) !default;
+$small-range: (28.125em, 40em) !default;
 $medium-range: (40.063em, 64em) !default;
 $large-range: (64.063em, 90em) !default;
 $xlarge-range: (90.063em, 120em) !default;
 $xxlarge-range: (120.063em, 99999999em) !default;
 
+// $small-range: (37.5em, 40.625em) !default;
+// $xsmall-range: (31.25em, 37.5em) !default;
+// $xxsmall-range: (28.125em, 31.25em) !default;
+$tiny-range: (25em, 28.125em) !default;
+$xtiny-range: (0, 25em) !default;
+// $xxtiny-range: (0em, 18.75em) !default;
+
+// $xxtiny-up: $screen !default;
+// $xxtiny-only: "#{$screen} and (max-width:#{upper-bound($xxtiny-range)})" !default;
 
 $screen: "only screen" !default;
+$xtiny-up: "#{$screen} and (min-width:#{lower-bound($xtiny-range)})" !default;
+$xtiny-down: "#{$screen} and (max-width:#{upper-bound($xtiny-range)})" !default;
+$xtiny-only: "#{$screen} and (min-width:#{lower-bound($xtiny-range)}) and (max-width:#{upper-bound($xtiny-range)})" !default;
+
+$tiny-up: "#{$screen} and (min-width:#{lower-bound($tiny-range)})" !default;
+$tiny-down: "#{$screen} and (max-width:#{upper-bound($tiny-range)})" !default;
+$tiny-only: "#{$screen} and (min-width:#{lower-bound($tiny-range)}) and (max-width:#{upper-bound($tiny-range)})" !default;
+
+// SMALL //
+// $small-up: "#{$screen} and (min-width:#{lower-bound($small-range)})" !default;
+
+
 
 $landscape: "#{$screen} and (orientation: landscape)" !default;
 $portrait: "#{$screen} and (orientation: portrait)" !default;
 
 $small-up: $screen !default;
+$small-down: "#{$screen} and (max-width:#{upper-bound($small-range)})" !default;
 $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})" !default;
 
 $medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})" !default;

@@ -1,31 +1,49 @@
 .fixed_nav {
     @extend .fixed;
-    @extend .row;
-    max-width: none;
-    background: #ffffff;
+    background: $white;
+    padding: rem-calc(17 0);
+
+    .row {
+        max-width: 65rem;
+    }
 
     .nav_container {
-        @extend .row;
-        max-width: 65.5rem;
-        margin: 0 auto;
-        padding: rem-calc(10 0);
-
-        h2 {
-            float: left;
-            font-family: $font-header;
-            margin: 0;
-            letter-spacing: 1rem;
+        @extend .large-12;
+        @extend .columns;
+        @media #{$small-only} {
+            padding-left: rem-calc(10);
+            padding-right: rem-calc(5);
         }
 
-        .list_container {
-            @include inline-list;
-            @extend .right;
-            margin:0;
+        .top_bar {
+            @extend .top-bar;
+            // background: $white;
 
-            li {
-                padding: rem-calc(13 30);
-                margin: 0;
-            }
+            // section .title-area li h1 a {
+            //     color: $jet;
+            // }
+
+            // section ul li a {
+            //     background: $white;
+            //     color: $jet;
+            // }
+        }
+    }
+
+    .name a {
+        padding: 0 !important;
+    }
+
+    h1 {
+        font-family: $font-header;
+        margin: 0;
+        letter-spacing: 1rem;
+        @media #{$medium-up} {
+            font-size: 3rem !important;
+        }
+        @media #{$small-only} {
+            font-size: 24px !important;
+            letter-spacing: .3rem;
         }
     }
 }

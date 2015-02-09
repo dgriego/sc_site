@@ -1,0 +1,16 @@
+.sc_home {
+    @extend .row;
+
+    img {
+        margin-top: rem-calc(39);
+        @media #{$small-only} {
+            margin-top: rem-calc(45);
+        }
+    }
+}
+
+.breakpoints {
+    position: fixed;
+    left: 0;
+    top: 100px;
+}

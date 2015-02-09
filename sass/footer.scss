@@ -1,50 +1,54 @@
 .fixed_footer {
     @extend .fixed;
-    @extend .row;
+    background: $white;
     bottom: 0;
     top: inherit;
-    max-width: none;
-    background: #ffffff;
-    opacity: 0.9;
+    font-family: Arial, sans-serif;
 
-    .footer_container {
-        @extend .row;
-        max-width: 65.5rem;
-        margin: 0 auto;
-        padding: 0;
+    .contact {
+        @extend .large-6;
+        @extend .columns;
+        @extend .no-bullet;
+        margin: 0;
+        padding-top: rem-calc(5);
 
-        .contact-info {
-            @extend .large-5;
-            @extend .columns;
-
-            .card {
-                @extend .vcard;
-                width: 90%;
-                margin: 0;
+        li {
+            @media #{$small-down} {
+                text-align: center;
             }
         }
 
-        .icon_footer_bar {
-            @extend .large-7;
-            @extend .columns;
+        li a {
+            color: $jet;
+        }
+
+        li:nth-child(1) {
+            font-size: 1.4rem;
+        }
+        li:nth-child(2) {
+            font-size: 1rem;
+        }
+        li:nth-child(3) {
+            font-size: 1.1rem;
         }
     }
 
-    .icon_row {
-        @include icon-bar(
-            // $bar-bg: $icon-bar-bg,
-            // $bar-font-color: $icon-bar-font-color,
-            // $bar-hover-color,
-            // $bar-icon-color: $icon-bar-icon-color,
-            // $bar-active-color,
-            // $padding,
-            // $font-size,
-            // $icon-size,
-            // $image-width,
-            // $image-height,
-            // $base-style: true,
-            // $disabled: false
-        );
+    .footer-height {
+        height: rem-calc(93);
+        @media #{$xtiny-down} {
+            height: rem-calc(60);
+        }
+    }
+
+    .social {
+        height: 100%;
+
+        a {
+            padding: 2rem 1.25rem;
+            @media #{$xtiny-down} {
+                padding: 1rem;
+            }
+        }
     }
 }
 

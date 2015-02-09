@@ -13,8 +13,11 @@
         padding-top: rem-calc(5);
 
         li {
-            @media #{$small-down} {
+            @media #{$medium-down} {
                 text-align: center;
+            }
+            @media #{$tiny-down} {
+                font-size: .8rem !important;
             }
         }
 
@@ -24,6 +27,9 @@
 
         li:nth-child(1) {
             font-size: 1.4rem;
+            @media #{$tiny-down} {
+                font-size: .9rem !important;
+            }
         }
         li:nth-child(2) {
             font-size: 1rem;

@@ -3,6 +3,9 @@
 
     img {
         margin-top: rem-calc(39);
+        @media #{$medium-only} {
+            margin-top: rem-calc(100);
+        }
         @media #{$small-only} {
             margin-top: rem-calc(45);
         }

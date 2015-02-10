@@ -63,6 +63,13 @@
 
       {% include "templates/partials/footer.html" %}
 
+      <div class="sc">
+        <canvas class="sc__background" id="scCanvas" width="150" height="150" data-canvas></canvas>
+      </div>
+
+      <!-- Our image to be blurred -->
+      <img data-canvas-image style="display: none" src="{{ cms.home.image|imageSize(auto) }}">
+
       {# Foundation JS #}
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
       <script src="/static/javascript/foundation/vendor/fastclick.js"></script>
@@ -73,6 +80,7 @@
 
       <!-- build:js /static/javascript/minified.js -->
       <script src="/static/javascript/main.js"></script>
+      <script src="/static/javascript/stackBlur.js"></script>
       <!-- endbuild -->
 
       <script>

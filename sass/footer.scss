@@ -7,13 +7,18 @@
 
     .contact {
         @extend .large-6;
+        @extend .medium-6;
         @extend .columns;
         @extend .no-bullet;
         margin: 0;
-        padding-top: rem-calc(5);
+        padding-top: rem-calc(3);
+        @media #{$medium-only} {
+            padding-left: 14px !important;
+        }
 
         li {
-            @media #{$medium-down} {
+            font-size: .9rem;
+            @media #{$small-down} {
                 text-align: center;
             }
             @media #{$tiny-down} {
@@ -26,21 +31,14 @@
         }
 
         li:nth-child(1) {
-            font-size: 1.4rem;
             @media #{$tiny-down} {
                 font-size: .9rem !important;
             }
         }
-        li:nth-child(2) {
-            font-size: 1rem;
-        }
-        li:nth-child(3) {
-            font-size: 1.1rem;
-        }
     }
 
     .footer-height {
-        height: rem-calc(93);
+        height: rem-calc(71);
         @media #{$xtiny-down} {
             height: rem-calc(60);
         }
@@ -50,9 +48,10 @@
         height: 100%;
 
         a {
-            padding: 2rem 1.25rem;
+            // padding: 2rem 1.25rem;
             @media #{$xtiny-down} {
-                padding: 1rem;
+                // padding: 1rem;
+                padding-top: 15px;
             }
         }
     }

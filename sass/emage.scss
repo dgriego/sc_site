@@ -1,0 +1,19 @@
+.emage {
+    @extend .row;
+    @media #{$large-up} {
+        margin-top: rem-calc(70);
+        margin-bottom: rem-calc(70);
+    }
+    @media #{$medium-only} {
+        margin-bottom: rem-calc(70);
+        margin-top: rem-calc(105);
+    }
+    @media #{$small-only} {
+        margin-top: rem-calc(40);
+        margin-bottom: rem-calc(160);
+    }
+
+    .embedly-embed {
+        width: 100%;
+    }
+}

@@ -1,0 +1,18 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %} - {{ cms.professionaladvisor.name }}{% endblock %}
+
+{% block content %}
+  <div class="about">
+    <div class="about_left">
+      <img src="{{ cms.biography.image|imageSize(auto) }}" />
+      <h6 class="subheader hide-for-small-only">{{ cms.biography.quote }}</h6>
+    </div>
+
+    <h3 class="small-12 columns text-center show-for-small-only">{{ cms.publicist.name }}</h3>
+    <h3 class="show-for-medium-up">{{ cms.publicist.name }}</h3>
+
+    <div class="about_right">
+      {{ cms.publicist.main_text|safe }}
+    </div>
+  </div>
+{% endblock %}

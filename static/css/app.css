@@ -20,18 +20,18 @@ meta.foundation-mq-medium {
 }
 
 meta.foundation-mq-medium-only {
-  font-family: "/only screen and (min-width:40.063em) and (max-width:64em)/";
+  font-family: "/only screen and (min-width:40.063em) and (max-width:61.0625em)/";
   width: 40.063em;
 }
 
 meta.foundation-mq-large {
-  font-family: "/only screen and (min-width:64.063em)/";
-  width: 64.063em;
+  font-family: "/only screen and (min-width:61.0625em)/";
+  width: 61.0625em;
 }
 
 meta.foundation-mq-large-only {
-  font-family: "/only screen and (min-width:64.063em) and (max-width:90em)/";
-  width: 64.063em;
+  font-family: "/only screen and (min-width:61.0625em) and (max-width:90em)/";
+  width: 61.0625em;
 }
 
 meta.foundation-mq-xlarge {
@@ -148,7 +148,7 @@ select {
   width: 100%;
 }
 
-.row, .sc_home {
+.row, .sc_home, .about, .emage {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -156,28 +156,42 @@ select {
   margin-bottom: 0;
   max-width: 62.5rem;
 }
-.row:before, .sc_home:before, .row:after, .sc_home:after {
+.row:before, .sc_home:before, .about:before, .emage:before, .row:after, .sc_home:after, .about:after, .emage:after {
   content: " ";
   display: table;
 }
-.row:after, .sc_home:after {
+.row:after, .sc_home:after, .about:after, .emage:after {
   clear: both;
 }
-.row.collapse > .column, .collapse.sc_home > .column,
+.row.collapse > .column, .collapse.sc_home > .column, .collapse.about > .column, .collapse.emage > .column,
 .row.collapse > .columns,
 .collapse.sc_home > .columns,
+.collapse.about > .columns,
+.collapse.emage > .columns,
 .fixed_nav .row.collapse > .nav_container,
 .fixed_nav .collapse.sc_home > .nav_container,
+.fixed_nav .collapse.about > .nav_container,
+.fixed_nav .collapse.emage > .nav_container,
 .fixed_footer .row.collapse > .contact,
-.fixed_footer .collapse.sc_home > .contact {
+.fixed_footer .collapse.sc_home > .contact,
+.fixed_footer .collapse.about > .contact,
+.fixed_footer .collapse.emage > .contact,
+.row.collapse > .about_left,
+.collapse.sc_home > .about_left,
+.collapse.about > .about_left,
+.collapse.emage > .about_left,
+.row.collapse > .about_right,
+.collapse.sc_home > .about_right,
+.collapse.about > .about_right,
+.collapse.emage > .about_right {
   padding-left: 0;
   padding-right: 0;
 }
-.row.collapse .row, .collapse.sc_home .row, .row.collapse .sc_home, .collapse.sc_home .sc_home {
+.row.collapse .row, .collapse.sc_home .row, .collapse.about .row, .collapse.emage .row, .row.collapse .sc_home, .collapse.sc_home .sc_home, .collapse.about .sc_home, .collapse.emage .sc_home, .row.collapse .about, .collapse.sc_home .about, .collapse.about .about, .collapse.emage .about, .row.collapse .emage, .collapse.sc_home .emage, .collapse.about .emage, .collapse.emage .emage {
   margin-left: 0;
   margin-right: 0;
 }
-.row .row, .sc_home .row, .row .sc_home, .sc_home .sc_home {
+.row .row, .sc_home .row, .about .row, .emage .row, .row .sc_home, .sc_home .sc_home, .about .sc_home, .emage .sc_home, .row .about, .sc_home .about, .about .about, .emage .about, .row .emage, .sc_home .emage, .about .emage, .emage .emage {
   width: auto;
   margin-left: -0.9375rem;
   margin-right: -0.9375rem;
@@ -185,30 +199,32 @@ select {
   margin-bottom: 0;
   max-width: none;
 }
-.row .row:before, .sc_home .row:before, .row .sc_home:before, .sc_home .sc_home:before, .row .row:after, .sc_home .row:after, .row .sc_home:after, .sc_home .sc_home:after {
+.row .row:before, .sc_home .row:before, .about .row:before, .emage .row:before, .row .sc_home:before, .sc_home .sc_home:before, .about .sc_home:before, .emage .sc_home:before, .row .about:before, .sc_home .about:before, .about .about:before, .emage .about:before, .row .emage:before, .sc_home .emage:before, .about .emage:before, .emage .emage:before, .row .row:after, .sc_home .row:after, .about .row:after, .emage .row:after, .row .sc_home:after, .sc_home .sc_home:after, .about .sc_home:after, .emage .sc_home:after, .row .about:after, .sc_home .about:after, .about .about:after, .emage .about:after, .row .emage:after, .sc_home .emage:after, .about .emage:after, .emage .emage:after {
   content: " ";
   display: table;
 }
-.row .row:after, .sc_home .row:after, .row .sc_home:after, .sc_home .sc_home:after {
+.row .row:after, .sc_home .row:after, .about .row:after, .emage .row:after, .row .sc_home:after, .sc_home .sc_home:after, .about .sc_home:after, .emage .sc_home:after, .row .about:after, .sc_home .about:after, .about .about:after, .emage .about:after, .row .emage:after, .sc_home .emage:after, .about .emage:after, .emage .emage:after {
   clear: both;
 }
-.row .row.collapse, .sc_home .row.collapse, .row .collapse.sc_home, .sc_home .collapse.sc_home {
+.row .row.collapse, .sc_home .row.collapse, .about .row.collapse, .emage .row.collapse, .row .collapse.sc_home, .sc_home .collapse.sc_home, .about .collapse.sc_home, .emage .collapse.sc_home, .row .collapse.about, .sc_home .collapse.about, .about .collapse.about, .emage .collapse.about, .row .collapse.emage, .sc_home .collapse.emage, .about .collapse.emage, .emage .collapse.emage {
   width: auto;
   margin: 0;
   max-width: none;
 }
-.row .row.collapse:before, .sc_home .row.collapse:before, .row .collapse.sc_home:before, .sc_home .collapse.sc_home:before, .row .row.collapse:after, .sc_home .row.collapse:after, .row .collapse.sc_home:after, .sc_home .collapse.sc_home:after {
+.row .row.collapse:before, .sc_home .row.collapse:before, .about .row.collapse:before, .emage .row.collapse:before, .row .collapse.sc_home:before, .sc_home .collapse.sc_home:before, .about .collapse.sc_home:before, .emage .collapse.sc_home:before, .row .collapse.about:before, .sc_home .collapse.about:before, .about .collapse.about:before, .emage .collapse.about:before, .row .collapse.emage:before, .sc_home .collapse.emage:before, .about .collapse.emage:before, .emage .collapse.emage:before, .row .row.collapse:after, .sc_home .row.collapse:after, .about .row.collapse:after, .emage .row.collapse:after, .row .collapse.sc_home:after, .sc_home .collapse.sc_home:after, .about .collapse.sc_home:after, .emage .collapse.sc_home:after, .row .collapse.about:after, .sc_home .collapse.about:after, .about .collapse.about:after, .emage .collapse.about:after, .row .collapse.emage:after, .sc_home .collapse.emage:after, .about .collapse.emage:after, .emage .collapse.emage:after {
   content: " ";
   display: table;
 }
-.row .row.collapse:after, .sc_home .row.collapse:after, .row .collapse.sc_home:after, .sc_home .collapse.sc_home:after {
+.row .row.collapse:after, .sc_home .row.collapse:after, .about .row.collapse:after, .emage .row.collapse:after, .row .collapse.sc_home:after, .sc_home .collapse.sc_home:after, .about .collapse.sc_home:after, .emage .collapse.sc_home:after, .row .collapse.about:after, .sc_home .collapse.about:after, .about .collapse.about:after, .emage .collapse.about:after, .row .collapse.emage:after, .sc_home .collapse.emage:after, .about .collapse.emage:after, .emage .collapse.emage:after {
   clear: both;
 }
 
 .column,
 .columns,
 .fixed_nav .nav_container,
-.fixed_footer .contact {
+.fixed_footer .contact,
+.about_left,
+.about_right {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 100%;
@@ -371,7 +387,9 @@ select {
   .column,
   .columns,
   .fixed_nav .nav_container,
-  .fixed_footer .contact {
+  .fixed_footer .contact,
+  .about_left,
+  .about_right {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -485,7 +503,9 @@ select {
   .column.small-centered,
   .columns.small-centered,
   .fixed_nav .small-centered.nav_container,
-  .fixed_footer .small-centered.contact {
+  .fixed_footer .small-centered.contact,
+  .small-centered.about_left,
+  .small-centered.about_right {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -494,7 +514,9 @@ select {
   .column.small-uncentered,
   .columns.small-uncentered,
   .fixed_nav .small-uncentered.nav_container,
-  .fixed_footer .small-uncentered.contact {
+  .fixed_footer .small-uncentered.contact,
+  .small-uncentered.about_left,
+  .small-uncentered.about_right {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -503,45 +525,79 @@ select {
   .column.small-centered:last-child,
   .columns.small-centered:last-child,
   .fixed_nav .small-centered.nav_container:last-child,
-  .fixed_footer .small-centered.contact:last-child {
+  .fixed_footer .small-centered.contact:last-child,
+  .small-centered.about_left:last-child,
+  .small-centered.about_right:last-child {
     float: none;
   }
 
   .column.small-uncentered:last-child,
   .columns.small-uncentered:last-child,
   .fixed_nav .small-uncentered.nav_container:last-child,
-  .fixed_footer .small-uncentered.contact:last-child {
+  .fixed_footer .small-uncentered.contact:last-child,
+  .small-uncentered.about_left:last-child,
+  .small-uncentered.about_right:last-child {
     float: left;
   }
 
   .column.small-uncentered.opposite,
   .columns.small-uncentered.opposite,
   .fixed_nav .small-uncentered.opposite.nav_container,
-  .fixed_footer .small-uncentered.opposite.contact {
+  .fixed_footer .small-uncentered.opposite.contact,
+  .small-uncentered.opposite.about_left,
+  .small-uncentered.opposite.about_right {
     float: right;
   }
 
-  .row.small-collapse > .column, .small-collapse.sc_home > .column,
+  .row.small-collapse > .column, .small-collapse.sc_home > .column, .small-collapse.about > .column, .small-collapse.emage > .column,
   .row.small-collapse > .columns,
   .small-collapse.sc_home > .columns,
+  .small-collapse.about > .columns,
+  .small-collapse.emage > .columns,
   .fixed_nav .row.small-collapse > .nav_container,
   .fixed_nav .small-collapse.sc_home > .nav_container,
+  .fixed_nav .small-collapse.about > .nav_container,
+  .fixed_nav .small-collapse.emage > .nav_container,
   .fixed_footer .row.small-collapse > .contact,
-  .fixed_footer .small-collapse.sc_home > .contact {
+  .fixed_footer .small-collapse.sc_home > .contact,
+  .fixed_footer .small-collapse.about > .contact,
+  .fixed_footer .small-collapse.emage > .contact,
+  .row.small-collapse > .about_left,
+  .small-collapse.sc_home > .about_left,
+  .small-collapse.about > .about_left,
+  .small-collapse.emage > .about_left,
+  .row.small-collapse > .about_right,
+  .small-collapse.sc_home > .about_right,
+  .small-collapse.about > .about_right,
+  .small-collapse.emage > .about_right {
     padding-left: 0;
     padding-right: 0;
   }
-  .row.small-collapse .row, .small-collapse.sc_home .row, .row.small-collapse .sc_home, .small-collapse.sc_home .sc_home {
+  .row.small-collapse .row, .small-collapse.sc_home .row, .small-collapse.about .row, .small-collapse.emage .row, .row.small-collapse .sc_home, .small-collapse.sc_home .sc_home, .small-collapse.about .sc_home, .small-collapse.emage .sc_home, .row.small-collapse .about, .small-collapse.sc_home .about, .small-collapse.about .about, .small-collapse.emage .about, .row.small-collapse .emage, .small-collapse.sc_home .emage, .small-collapse.about .emage, .small-collapse.emage .emage {
     margin-left: 0;
     margin-right: 0;
   }
-  .row.small-uncollapse > .column, .small-uncollapse.sc_home > .column,
+  .row.small-uncollapse > .column, .small-uncollapse.sc_home > .column, .small-uncollapse.about > .column, .small-uncollapse.emage > .column,
   .row.small-uncollapse > .columns,
   .small-uncollapse.sc_home > .columns,
+  .small-uncollapse.about > .columns,
+  .small-uncollapse.emage > .columns,
   .fixed_nav .row.small-uncollapse > .nav_container,
   .fixed_nav .small-uncollapse.sc_home > .nav_container,
+  .fixed_nav .small-uncollapse.about > .nav_container,
+  .fixed_nav .small-uncollapse.emage > .nav_container,
   .fixed_footer .row.small-uncollapse > .contact,
-  .fixed_footer .small-uncollapse.sc_home > .contact {
+  .fixed_footer .small-uncollapse.sc_home > .contact,
+  .fixed_footer .small-uncollapse.about > .contact,
+  .fixed_footer .small-uncollapse.emage > .contact,
+  .row.small-uncollapse > .about_left,
+  .small-uncollapse.sc_home > .about_left,
+  .small-uncollapse.about > .about_left,
+  .small-uncollapse.emage > .about_left,
+  .row.small-uncollapse > .about_right,
+  .small-uncollapse.sc_home > .about_right,
+  .small-uncollapse.about > .about_right,
+  .small-uncollapse.emage > .about_right {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     float: left;
@@ -695,7 +751,9 @@ select {
   .column,
   .columns,
   .fixed_nav .nav_container,
-  .fixed_footer .contact {
+  .fixed_footer .contact,
+  .about_left,
+  .about_right {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -722,7 +780,7 @@ select {
     width: 41.66667%;
   }
 
-  .medium-6 {
+  .medium-6, .fixed_footer .contact, .about_left, .about_right {
     width: 50%;
   }
 
@@ -809,7 +867,9 @@ select {
   .column.medium-centered,
   .columns.medium-centered,
   .fixed_nav .medium-centered.nav_container,
-  .fixed_footer .medium-centered.contact {
+  .fixed_footer .medium-centered.contact,
+  .medium-centered.about_left,
+  .medium-centered.about_right {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -818,7 +878,9 @@ select {
   .column.medium-uncentered,
   .columns.medium-uncentered,
   .fixed_nav .medium-uncentered.nav_container,
-  .fixed_footer .medium-uncentered.contact {
+  .fixed_footer .medium-uncentered.contact,
+  .medium-uncentered.about_left,
+  .medium-uncentered.about_right {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -827,45 +889,79 @@ select {
   .column.medium-centered:last-child,
   .columns.medium-centered:last-child,
   .fixed_nav .medium-centered.nav_container:last-child,
-  .fixed_footer .medium-centered.contact:last-child {
+  .fixed_footer .medium-centered.contact:last-child,
+  .medium-centered.about_left:last-child,
+  .medium-centered.about_right:last-child {
     float: none;
   }
 
   .column.medium-uncentered:last-child,
   .columns.medium-uncentered:last-child,
   .fixed_nav .medium-uncentered.nav_container:last-child,
-  .fixed_footer .medium-uncentered.contact:last-child {
+  .fixed_footer .medium-uncentered.contact:last-child,
+  .medium-uncentered.about_left:last-child,
+  .medium-uncentered.about_right:last-child {
     float: left;
   }
 
   .column.medium-uncentered.opposite,
   .columns.medium-uncentered.opposite,
   .fixed_nav .medium-uncentered.opposite.nav_container,
-  .fixed_footer .medium-uncentered.opposite.contact {
+  .fixed_footer .medium-uncentered.opposite.contact,
+  .medium-uncentered.opposite.about_left,
+  .medium-uncentered.opposite.about_right {
     float: right;
   }
 
-  .row.medium-collapse > .column, .medium-collapse.sc_home > .column,
+  .row.medium-collapse > .column, .medium-collapse.sc_home > .column, .medium-collapse.about > .column, .medium-collapse.emage > .column,
   .row.medium-collapse > .columns,
   .medium-collapse.sc_home > .columns,
+  .medium-collapse.about > .columns,
+  .medium-collapse.emage > .columns,
   .fixed_nav .row.medium-collapse > .nav_container,
   .fixed_nav .medium-collapse.sc_home > .nav_container,
+  .fixed_nav .medium-collapse.about > .nav_container,
+  .fixed_nav .medium-collapse.emage > .nav_container,
   .fixed_footer .row.medium-collapse > .contact,
-  .fixed_footer .medium-collapse.sc_home > .contact {
+  .fixed_footer .medium-collapse.sc_home > .contact,
+  .fixed_footer .medium-collapse.about > .contact,
+  .fixed_footer .medium-collapse.emage > .contact,
+  .row.medium-collapse > .about_left,
+  .medium-collapse.sc_home > .about_left,
+  .medium-collapse.about > .about_left,
+  .medium-collapse.emage > .about_left,
+  .row.medium-collapse > .about_right,
+  .medium-collapse.sc_home > .about_right,
+  .medium-collapse.about > .about_right,
+  .medium-collapse.emage > .about_right {
     padding-left: 0;
     padding-right: 0;
   }
-  .row.medium-collapse .row, .medium-collapse.sc_home .row, .row.medium-collapse .sc_home, .medium-collapse.sc_home .sc_home {
+  .row.medium-collapse .row, .medium-collapse.sc_home .row, .medium-collapse.about .row, .medium-collapse.emage .row, .row.medium-collapse .sc_home, .medium-collapse.sc_home .sc_home, .medium-collapse.about .sc_home, .medium-collapse.emage .sc_home, .row.medium-collapse .about, .medium-collapse.sc_home .about, .medium-collapse.about .about, .medium-collapse.emage .about, .row.medium-collapse .emage, .medium-collapse.sc_home .emage, .medium-collapse.about .emage, .medium-collapse.emage .emage {
     margin-left: 0;
     margin-right: 0;
   }
-  .row.medium-uncollapse > .column, .medium-uncollapse.sc_home > .column,
+  .row.medium-uncollapse > .column, .medium-uncollapse.sc_home > .column, .medium-uncollapse.about > .column, .medium-uncollapse.emage > .column,
   .row.medium-uncollapse > .columns,
   .medium-uncollapse.sc_home > .columns,
+  .medium-uncollapse.about > .columns,
+  .medium-uncollapse.emage > .columns,
   .fixed_nav .row.medium-uncollapse > .nav_container,
   .fixed_nav .medium-uncollapse.sc_home > .nav_container,
+  .fixed_nav .medium-uncollapse.about > .nav_container,
+  .fixed_nav .medium-uncollapse.emage > .nav_container,
   .fixed_footer .row.medium-uncollapse > .contact,
-  .fixed_footer .medium-uncollapse.sc_home > .contact {
+  .fixed_footer .medium-uncollapse.sc_home > .contact,
+  .fixed_footer .medium-uncollapse.about > .contact,
+  .fixed_footer .medium-uncollapse.emage > .contact,
+  .row.medium-uncollapse > .about_left,
+  .medium-uncollapse.sc_home > .about_left,
+  .medium-uncollapse.about > .about_left,
+  .medium-uncollapse.emage > .about_left,
+  .row.medium-uncollapse > .about_right,
+  .medium-uncollapse.sc_home > .about_right,
+  .medium-uncollapse.about > .about_right,
+  .medium-uncollapse.emage > .about_right {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     float: left;
@@ -1015,7 +1111,7 @@ select {
     left: auto;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.0625em) {
   .large-push-0 {
     position: relative;
     left: 0%;
@@ -1163,7 +1259,9 @@ select {
   .column,
   .columns,
   .fixed_nav .nav_container,
-  .fixed_footer .contact {
+  .fixed_footer .contact,
+  .about_left,
+  .about_right {
     position: relative;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -1190,7 +1288,7 @@ select {
     width: 41.66667%;
   }
 
-  .large-6, .fixed_footer .contact {
+  .large-6, .fixed_footer .contact, .about_left, .about_right {
     width: 50%;
   }
 
@@ -1277,7 +1375,9 @@ select {
   .column.large-centered,
   .columns.large-centered,
   .fixed_nav .large-centered.nav_container,
-  .fixed_footer .large-centered.contact {
+  .fixed_footer .large-centered.contact,
+  .large-centered.about_left,
+  .large-centered.about_right {
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -1286,7 +1386,9 @@ select {
   .column.large-uncentered,
   .columns.large-uncentered,
   .fixed_nav .large-uncentered.nav_container,
-  .fixed_footer .large-uncentered.contact {
+  .fixed_footer .large-uncentered.contact,
+  .large-uncentered.about_left,
+  .large-uncentered.about_right {
     margin-left: 0;
     margin-right: 0;
     float: left;
@@ -1295,45 +1397,79 @@ select {
   .column.large-centered:last-child,
   .columns.large-centered:last-child,
   .fixed_nav .large-centered.nav_container:last-child,
-  .fixed_footer .large-centered.contact:last-child {
+  .fixed_footer .large-centered.contact:last-child,
+  .large-centered.about_left:last-child,
+  .large-centered.about_right:last-child {
     float: none;
   }
 
   .column.large-uncentered:last-child,
   .columns.large-uncentered:last-child,
   .fixed_nav .large-uncentered.nav_container:last-child,
-  .fixed_footer .large-uncentered.contact:last-child {
+  .fixed_footer .large-uncentered.contact:last-child,
+  .large-uncentered.about_left:last-child,
+  .large-uncentered.about_right:last-child {
     float: left;
   }
 
   .column.large-uncentered.opposite,
   .columns.large-uncentered.opposite,
   .fixed_nav .large-uncentered.opposite.nav_container,
-  .fixed_footer .large-uncentered.opposite.contact {
+  .fixed_footer .large-uncentered.opposite.contact,
+  .large-uncentered.opposite.about_left,
+  .large-uncentered.opposite.about_right {
     float: right;
   }
 
-  .row.large-collapse > .column, .large-collapse.sc_home > .column,
+  .row.large-collapse > .column, .large-collapse.sc_home > .column, .large-collapse.about > .column, .large-collapse.emage > .column,
   .row.large-collapse > .columns,
   .large-collapse.sc_home > .columns,
+  .large-collapse.about > .columns,
+  .large-collapse.emage > .columns,
   .fixed_nav .row.large-collapse > .nav_container,
   .fixed_nav .large-collapse.sc_home > .nav_container,
+  .fixed_nav .large-collapse.about > .nav_container,
+  .fixed_nav .large-collapse.emage > .nav_container,
   .fixed_footer .row.large-collapse > .contact,
-  .fixed_footer .large-collapse.sc_home > .contact {
+  .fixed_footer .large-collapse.sc_home > .contact,
+  .fixed_footer .large-collapse.about > .contact,
+  .fixed_footer .large-collapse.emage > .contact,
+  .row.large-collapse > .about_left,
+  .large-collapse.sc_home > .about_left,
+  .large-collapse.about > .about_left,
+  .large-collapse.emage > .about_left,
+  .row.large-collapse > .about_right,
+  .large-collapse.sc_home > .about_right,
+  .large-collapse.about > .about_right,
+  .large-collapse.emage > .about_right {
     padding-left: 0;
     padding-right: 0;
   }
-  .row.large-collapse .row, .large-collapse.sc_home .row, .row.large-collapse .sc_home, .large-collapse.sc_home .sc_home {
+  .row.large-collapse .row, .large-collapse.sc_home .row, .large-collapse.about .row, .large-collapse.emage .row, .row.large-collapse .sc_home, .large-collapse.sc_home .sc_home, .large-collapse.about .sc_home, .large-collapse.emage .sc_home, .row.large-collapse .about, .large-collapse.sc_home .about, .large-collapse.about .about, .large-collapse.emage .about, .row.large-collapse .emage, .large-collapse.sc_home .emage, .large-collapse.about .emage, .large-collapse.emage .emage {
     margin-left: 0;
     margin-right: 0;
   }
-  .row.large-uncollapse > .column, .large-uncollapse.sc_home > .column,
+  .row.large-uncollapse > .column, .large-uncollapse.sc_home > .column, .large-uncollapse.about > .column, .large-uncollapse.emage > .column,
   .row.large-uncollapse > .columns,
   .large-uncollapse.sc_home > .columns,
+  .large-uncollapse.about > .columns,
+  .large-uncollapse.emage > .columns,
   .fixed_nav .row.large-uncollapse > .nav_container,
   .fixed_nav .large-uncollapse.sc_home > .nav_container,
+  .fixed_nav .large-uncollapse.about > .nav_container,
+  .fixed_nav .large-uncollapse.emage > .nav_container,
   .fixed_footer .row.large-uncollapse > .contact,
-  .fixed_footer .large-uncollapse.sc_home > .contact {
+  .fixed_footer .large-uncollapse.sc_home > .contact,
+  .fixed_footer .large-uncollapse.about > .contact,
+  .fixed_footer .large-uncollapse.emage > .contact,
+  .row.large-uncollapse > .about_left,
+  .large-uncollapse.sc_home > .about_left,
+  .large-uncollapse.about > .about_left,
+  .large-uncollapse.emage > .about_left,
+  .row.large-uncollapse > .about_right,
+  .large-uncollapse.sc_home > .about_right,
+  .large-uncollapse.about > .about_right,
+  .large-uncollapse.emage > .about_right {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     float: left;
@@ -1869,7 +2005,7 @@ select {
     clear: both;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.0625em) {
   .large-block-grid-1 > li {
     width: 100%;
     list-style: none;
@@ -3362,87 +3498,309 @@ form {
 }
 
 /* Using forms within rows, we need to set some defaults */
-form .row .row, form .sc_home .row, form .row .sc_home, form .sc_home .sc_home {
+form .row .row, form .sc_home .row, form .about .row, form .emage .row, form .row .sc_home, form .sc_home .sc_home, form .about .sc_home, form .emage .sc_home, form .row .about, form .sc_home .about, form .about .about, form .emage .about, form .row .emage, form .sc_home .emage, form .about .emage, form .emage .emage {
   margin: 0 -0.5rem;
 }
-form .row .row .column, form .sc_home .row .column, form .row .sc_home .column, form .sc_home .sc_home .column,
+form .row .row .column, form .sc_home .row .column, form .about .row .column, form .emage .row .column, form .row .sc_home .column, form .sc_home .sc_home .column, form .about .sc_home .column, form .emage .sc_home .column, form .row .about .column, form .sc_home .about .column, form .about .about .column, form .emage .about .column, form .row .emage .column, form .sc_home .emage .column, form .about .emage .column, form .emage .emage .column,
 form .row .row .columns,
 form .sc_home .row .columns,
+form .about .row .columns,
+form .emage .row .columns,
 form .row .sc_home .columns,
 form .sc_home .sc_home .columns,
+form .about .sc_home .columns,
+form .emage .sc_home .columns,
+form .row .about .columns,
+form .sc_home .about .columns,
+form .about .about .columns,
+form .emage .about .columns,
+form .row .emage .columns,
+form .sc_home .emage .columns,
+form .about .emage .columns,
+form .emage .emage .columns,
 form .row .row .fixed_nav .nav_container,
 .fixed_nav form .row .row .nav_container,
 form .sc_home .row .fixed_nav .nav_container,
 .fixed_nav form .sc_home .row .nav_container,
+form .about .row .fixed_nav .nav_container,
+.fixed_nav form .about .row .nav_container,
+form .emage .row .fixed_nav .nav_container,
+.fixed_nav form .emage .row .nav_container,
 form .row .sc_home .fixed_nav .nav_container,
 .fixed_nav form .row .sc_home .nav_container,
 form .sc_home .sc_home .fixed_nav .nav_container,
 .fixed_nav form .sc_home .sc_home .nav_container,
+form .about .sc_home .fixed_nav .nav_container,
+.fixed_nav form .about .sc_home .nav_container,
+form .emage .sc_home .fixed_nav .nav_container,
+.fixed_nav form .emage .sc_home .nav_container,
+form .row .about .fixed_nav .nav_container,
+.fixed_nav form .row .about .nav_container,
+form .sc_home .about .fixed_nav .nav_container,
+.fixed_nav form .sc_home .about .nav_container,
+form .about .about .fixed_nav .nav_container,
+.fixed_nav form .about .about .nav_container,
+form .emage .about .fixed_nav .nav_container,
+.fixed_nav form .emage .about .nav_container,
+form .row .emage .fixed_nav .nav_container,
+.fixed_nav form .row .emage .nav_container,
+form .sc_home .emage .fixed_nav .nav_container,
+.fixed_nav form .sc_home .emage .nav_container,
+form .about .emage .fixed_nav .nav_container,
+.fixed_nav form .about .emage .nav_container,
+form .emage .emage .fixed_nav .nav_container,
+.fixed_nav form .emage .emage .nav_container,
 form .row .row .fixed_footer .contact,
 .fixed_footer form .row .row .contact,
 form .sc_home .row .fixed_footer .contact,
 .fixed_footer form .sc_home .row .contact,
+form .about .row .fixed_footer .contact,
+.fixed_footer form .about .row .contact,
+form .emage .row .fixed_footer .contact,
+.fixed_footer form .emage .row .contact,
 form .row .sc_home .fixed_footer .contact,
 .fixed_footer form .row .sc_home .contact,
 form .sc_home .sc_home .fixed_footer .contact,
-.fixed_footer form .sc_home .sc_home .contact {
+.fixed_footer form .sc_home .sc_home .contact,
+form .about .sc_home .fixed_footer .contact,
+.fixed_footer form .about .sc_home .contact,
+form .emage .sc_home .fixed_footer .contact,
+.fixed_footer form .emage .sc_home .contact,
+form .row .about .fixed_footer .contact,
+.fixed_footer form .row .about .contact,
+form .sc_home .about .fixed_footer .contact,
+.fixed_footer form .sc_home .about .contact,
+form .about .about .fixed_footer .contact,
+.fixed_footer form .about .about .contact,
+form .emage .about .fixed_footer .contact,
+.fixed_footer form .emage .about .contact,
+form .row .emage .fixed_footer .contact,
+.fixed_footer form .row .emage .contact,
+form .sc_home .emage .fixed_footer .contact,
+.fixed_footer form .sc_home .emage .contact,
+form .about .emage .fixed_footer .contact,
+.fixed_footer form .about .emage .contact,
+form .emage .emage .fixed_footer .contact,
+.fixed_footer form .emage .emage .contact,
+form .row .row .about_left,
+form .sc_home .row .about_left,
+form .about .row .about_left,
+form .emage .row .about_left,
+form .row .sc_home .about_left,
+form .sc_home .sc_home .about_left,
+form .about .sc_home .about_left,
+form .emage .sc_home .about_left,
+form .row .about .about_left,
+form .sc_home .about .about_left,
+form .about .about .about_left,
+form .emage .about .about_left,
+form .row .emage .about_left,
+form .sc_home .emage .about_left,
+form .about .emage .about_left,
+form .emage .emage .about_left,
+form .row .row .about_right,
+form .sc_home .row .about_right,
+form .about .row .about_right,
+form .emage .row .about_right,
+form .row .sc_home .about_right,
+form .sc_home .sc_home .about_right,
+form .about .sc_home .about_right,
+form .emage .sc_home .about_right,
+form .row .about .about_right,
+form .sc_home .about .about_right,
+form .about .about .about_right,
+form .emage .about .about_right,
+form .row .emage .about_right,
+form .sc_home .emage .about_right,
+form .about .emage .about_right,
+form .emage .emage .about_right {
   padding: 0 0.5rem;
 }
-form .row .row.collapse, form .sc_home .row.collapse, form .row .collapse.sc_home, form .sc_home .collapse.sc_home {
+form .row .row.collapse, form .sc_home .row.collapse, form .about .row.collapse, form .emage .row.collapse, form .row .collapse.sc_home, form .sc_home .collapse.sc_home, form .about .collapse.sc_home, form .emage .collapse.sc_home, form .row .collapse.about, form .sc_home .collapse.about, form .about .collapse.about, form .emage .collapse.about, form .row .collapse.emage, form .sc_home .collapse.emage, form .about .collapse.emage, form .emage .collapse.emage {
   margin: 0;
 }
-form .row .row.collapse .column, form .sc_home .row.collapse .column, form .row .collapse.sc_home .column, form .sc_home .collapse.sc_home .column,
+form .row .row.collapse .column, form .sc_home .row.collapse .column, form .about .row.collapse .column, form .emage .row.collapse .column, form .row .collapse.sc_home .column, form .sc_home .collapse.sc_home .column, form .about .collapse.sc_home .column, form .emage .collapse.sc_home .column, form .row .collapse.about .column, form .sc_home .collapse.about .column, form .about .collapse.about .column, form .emage .collapse.about .column, form .row .collapse.emage .column, form .sc_home .collapse.emage .column, form .about .collapse.emage .column, form .emage .collapse.emage .column,
 form .row .row.collapse .columns,
 form .sc_home .row.collapse .columns,
+form .about .row.collapse .columns,
+form .emage .row.collapse .columns,
 form .row .collapse.sc_home .columns,
 form .sc_home .collapse.sc_home .columns,
+form .about .collapse.sc_home .columns,
+form .emage .collapse.sc_home .columns,
+form .row .collapse.about .columns,
+form .sc_home .collapse.about .columns,
+form .about .collapse.about .columns,
+form .emage .collapse.about .columns,
+form .row .collapse.emage .columns,
+form .sc_home .collapse.emage .columns,
+form .about .collapse.emage .columns,
+form .emage .collapse.emage .columns,
 form .row .row.collapse .fixed_nav .nav_container,
 .fixed_nav form .row .row.collapse .nav_container,
 form .sc_home .row.collapse .fixed_nav .nav_container,
 .fixed_nav form .sc_home .row.collapse .nav_container,
+form .about .row.collapse .fixed_nav .nav_container,
+.fixed_nav form .about .row.collapse .nav_container,
+form .emage .row.collapse .fixed_nav .nav_container,
+.fixed_nav form .emage .row.collapse .nav_container,
 form .row .collapse.sc_home .fixed_nav .nav_container,
 .fixed_nav form .row .collapse.sc_home .nav_container,
 form .sc_home .collapse.sc_home .fixed_nav .nav_container,
 .fixed_nav form .sc_home .collapse.sc_home .nav_container,
+form .about .collapse.sc_home .fixed_nav .nav_container,
+.fixed_nav form .about .collapse.sc_home .nav_container,
+form .emage .collapse.sc_home .fixed_nav .nav_container,
+.fixed_nav form .emage .collapse.sc_home .nav_container,
+form .row .collapse.about .fixed_nav .nav_container,
+.fixed_nav form .row .collapse.about .nav_container,
+form .sc_home .collapse.about .fixed_nav .nav_container,
+.fixed_nav form .sc_home .collapse.about .nav_container,
+form .about .collapse.about .fixed_nav .nav_container,
+.fixed_nav form .about .collapse.about .nav_container,
+form .emage .collapse.about .fixed_nav .nav_container,
+.fixed_nav form .emage .collapse.about .nav_container,
+form .row .collapse.emage .fixed_nav .nav_container,
+.fixed_nav form .row .collapse.emage .nav_container,
+form .sc_home .collapse.emage .fixed_nav .nav_container,
+.fixed_nav form .sc_home .collapse.emage .nav_container,
+form .about .collapse.emage .fixed_nav .nav_container,
+.fixed_nav form .about .collapse.emage .nav_container,
+form .emage .collapse.emage .fixed_nav .nav_container,
+.fixed_nav form .emage .collapse.emage .nav_container,
 form .row .row.collapse .fixed_footer .contact,
 .fixed_footer form .row .row.collapse .contact,
 form .sc_home .row.collapse .fixed_footer .contact,
 .fixed_footer form .sc_home .row.collapse .contact,
+form .about .row.collapse .fixed_footer .contact,
+.fixed_footer form .about .row.collapse .contact,
+form .emage .row.collapse .fixed_footer .contact,
+.fixed_footer form .emage .row.collapse .contact,
 form .row .collapse.sc_home .fixed_footer .contact,
 .fixed_footer form .row .collapse.sc_home .contact,
 form .sc_home .collapse.sc_home .fixed_footer .contact,
-.fixed_footer form .sc_home .collapse.sc_home .contact {
+.fixed_footer form .sc_home .collapse.sc_home .contact,
+form .about .collapse.sc_home .fixed_footer .contact,
+.fixed_footer form .about .collapse.sc_home .contact,
+form .emage .collapse.sc_home .fixed_footer .contact,
+.fixed_footer form .emage .collapse.sc_home .contact,
+form .row .collapse.about .fixed_footer .contact,
+.fixed_footer form .row .collapse.about .contact,
+form .sc_home .collapse.about .fixed_footer .contact,
+.fixed_footer form .sc_home .collapse.about .contact,
+form .about .collapse.about .fixed_footer .contact,
+.fixed_footer form .about .collapse.about .contact,
+form .emage .collapse.about .fixed_footer .contact,
+.fixed_footer form .emage .collapse.about .contact,
+form .row .collapse.emage .fixed_footer .contact,
+.fixed_footer form .row .collapse.emage .contact,
+form .sc_home .collapse.emage .fixed_footer .contact,
+.fixed_footer form .sc_home .collapse.emage .contact,
+form .about .collapse.emage .fixed_footer .contact,
+.fixed_footer form .about .collapse.emage .contact,
+form .emage .collapse.emage .fixed_footer .contact,
+.fixed_footer form .emage .collapse.emage .contact,
+form .row .row.collapse .about_left,
+form .sc_home .row.collapse .about_left,
+form .about .row.collapse .about_left,
+form .emage .row.collapse .about_left,
+form .row .collapse.sc_home .about_left,
+form .sc_home .collapse.sc_home .about_left,
+form .about .collapse.sc_home .about_left,
+form .emage .collapse.sc_home .about_left,
+form .row .collapse.about .about_left,
+form .sc_home .collapse.about .about_left,
+form .about .collapse.about .about_left,
+form .emage .collapse.about .about_left,
+form .row .collapse.emage .about_left,
+form .sc_home .collapse.emage .about_left,
+form .about .collapse.emage .about_left,
+form .emage .collapse.emage .about_left,
+form .row .row.collapse .about_right,
+form .sc_home .row.collapse .about_right,
+form .about .row.collapse .about_right,
+form .emage .row.collapse .about_right,
+form .row .collapse.sc_home .about_right,
+form .sc_home .collapse.sc_home .about_right,
+form .about .collapse.sc_home .about_right,
+form .emage .collapse.sc_home .about_right,
+form .row .collapse.about .about_right,
+form .sc_home .collapse.about .about_right,
+form .about .collapse.about .about_right,
+form .emage .collapse.about .about_right,
+form .row .collapse.emage .about_right,
+form .sc_home .collapse.emage .about_right,
+form .about .collapse.emage .about_right,
+form .emage .collapse.emage .about_right {
   padding: 0;
 }
-form .row .row.collapse input, form .sc_home .row.collapse input, form .row .collapse.sc_home input, form .sc_home .collapse.sc_home input {
+form .row .row.collapse input, form .sc_home .row.collapse input, form .about .row.collapse input, form .emage .row.collapse input, form .row .collapse.sc_home input, form .sc_home .collapse.sc_home input, form .about .collapse.sc_home input, form .emage .collapse.sc_home input, form .row .collapse.about input, form .sc_home .collapse.about input, form .about .collapse.about input, form .emage .collapse.about input, form .row .collapse.emage input, form .sc_home .collapse.emage input, form .about .collapse.emage input, form .emage .collapse.emage input {
   -webkit-border-bottom-right-radius: 0;
   -webkit-border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
-form .row input.column, form .sc_home input.column,
+form .row input.column, form .sc_home input.column, form .about input.column, form .emage input.column,
 form .row input.columns,
 form .sc_home input.columns,
+form .about input.columns,
+form .emage input.columns,
 form .row .fixed_nav input.nav_container,
 .fixed_nav form .row input.nav_container,
 form .sc_home .fixed_nav input.nav_container,
 .fixed_nav form .sc_home input.nav_container,
+form .about .fixed_nav input.nav_container,
+.fixed_nav form .about input.nav_container,
+form .emage .fixed_nav input.nav_container,
+.fixed_nav form .emage input.nav_container,
 form .row .fixed_footer input.contact,
 .fixed_footer form .row input.contact,
 form .sc_home .fixed_footer input.contact,
 .fixed_footer form .sc_home input.contact,
+form .about .fixed_footer input.contact,
+.fixed_footer form .about input.contact,
+form .emage .fixed_footer input.contact,
+.fixed_footer form .emage input.contact,
+form .row input.about_left,
+form .sc_home input.about_left,
+form .about input.about_left,
+form .emage input.about_left,
+form .row input.about_right,
+form .sc_home input.about_right,
+form .about input.about_right,
+form .emage input.about_right,
 form .row textarea.column,
 form .sc_home textarea.column,
+form .about textarea.column,
+form .emage textarea.column,
 form .row textarea.columns,
 form .sc_home textarea.columns,
+form .about textarea.columns,
+form .emage textarea.columns,
 form .row .fixed_nav textarea.nav_container,
 .fixed_nav form .row textarea.nav_container,
 form .sc_home .fixed_nav textarea.nav_container,
 .fixed_nav form .sc_home textarea.nav_container,
+form .about .fixed_nav textarea.nav_container,
+.fixed_nav form .about textarea.nav_container,
+form .emage .fixed_nav textarea.nav_container,
+.fixed_nav form .emage textarea.nav_container,
 form .row .fixed_footer textarea.contact,
 .fixed_footer form .row textarea.contact,
 form .sc_home .fixed_footer textarea.contact,
-.fixed_footer form .sc_home textarea.contact {
+.fixed_footer form .sc_home textarea.contact,
+form .about .fixed_footer textarea.contact,
+.fixed_footer form .about textarea.contact,
+form .emage .fixed_footer textarea.contact,
+.fixed_footer form .emage textarea.contact,
+form .row textarea.about_left,
+form .sc_home textarea.about_left,
+form .about textarea.about_left,
+form .emage textarea.about_left,
+form .row textarea.about_right,
+form .sc_home textarea.about_right,
+form .about textarea.about_right,
+form .emage textarea.about_right {
   padding-left: 0.5rem;
 }
 
@@ -3593,104 +3951,248 @@ input[type="text"].radius, input[type="password"].radius, input[type="date"].rad
   border-radius: 3px;
 }
 
-form .row .prefix-radius.row.collapse input, form .sc_home .prefix-radius.row.collapse input, form .row .prefix-radius.collapse.sc_home input, form .sc_home .prefix-radius.collapse.sc_home input,
+form .row .prefix-radius.row.collapse input, form .sc_home .prefix-radius.row.collapse input, form .about .prefix-radius.row.collapse input, form .emage .prefix-radius.row.collapse input, form .row .prefix-radius.collapse.sc_home input, form .sc_home .prefix-radius.collapse.sc_home input, form .about .prefix-radius.collapse.sc_home input, form .emage .prefix-radius.collapse.sc_home input, form .row .prefix-radius.collapse.about input, form .sc_home .prefix-radius.collapse.about input, form .about .prefix-radius.collapse.about input, form .emage .prefix-radius.collapse.about input, form .row .prefix-radius.collapse.emage input, form .sc_home .prefix-radius.collapse.emage input, form .about .prefix-radius.collapse.emage input, form .emage .prefix-radius.collapse.emage input,
 form .row .prefix-radius.row.collapse textarea,
 form .sc_home .prefix-radius.row.collapse textarea,
+form .about .prefix-radius.row.collapse textarea,
+form .emage .prefix-radius.row.collapse textarea,
 form .row .prefix-radius.collapse.sc_home textarea,
 form .sc_home .prefix-radius.collapse.sc_home textarea,
+form .about .prefix-radius.collapse.sc_home textarea,
+form .emage .prefix-radius.collapse.sc_home textarea,
+form .row .prefix-radius.collapse.about textarea,
+form .sc_home .prefix-radius.collapse.about textarea,
+form .about .prefix-radius.collapse.about textarea,
+form .emage .prefix-radius.collapse.about textarea,
+form .row .prefix-radius.collapse.emage textarea,
+form .sc_home .prefix-radius.collapse.emage textarea,
+form .about .prefix-radius.collapse.emage textarea,
+form .emage .prefix-radius.collapse.emage textarea,
 form .row .prefix-radius.row.collapse select,
 form .sc_home .prefix-radius.row.collapse select,
+form .about .prefix-radius.row.collapse select,
+form .emage .prefix-radius.row.collapse select,
 form .row .prefix-radius.collapse.sc_home select,
 form .sc_home .prefix-radius.collapse.sc_home select,
+form .about .prefix-radius.collapse.sc_home select,
+form .emage .prefix-radius.collapse.sc_home select,
+form .row .prefix-radius.collapse.about select,
+form .sc_home .prefix-radius.collapse.about select,
+form .about .prefix-radius.collapse.about select,
+form .emage .prefix-radius.collapse.about select,
+form .row .prefix-radius.collapse.emage select,
+form .sc_home .prefix-radius.collapse.emage select,
+form .about .prefix-radius.collapse.emage select,
+form .emage .prefix-radius.collapse.emage select,
 form .row .prefix-radius.row.collapse button,
 form .sc_home .prefix-radius.row.collapse button,
+form .about .prefix-radius.row.collapse button,
+form .emage .prefix-radius.row.collapse button,
 form .row .prefix-radius.collapse.sc_home button,
-form .sc_home .prefix-radius.collapse.sc_home button {
+form .sc_home .prefix-radius.collapse.sc_home button,
+form .about .prefix-radius.collapse.sc_home button,
+form .emage .prefix-radius.collapse.sc_home button,
+form .row .prefix-radius.collapse.about button,
+form .sc_home .prefix-radius.collapse.about button,
+form .about .prefix-radius.collapse.about button,
+form .emage .prefix-radius.collapse.about button,
+form .row .prefix-radius.collapse.emage button,
+form .sc_home .prefix-radius.collapse.emage button,
+form .about .prefix-radius.collapse.emage button,
+form .emage .prefix-radius.collapse.emage button {
   border-radius: 0;
   -webkit-border-bottom-right-radius: 3px;
   -webkit-border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
 }
-form .row .prefix-radius.row.collapse .prefix, form .sc_home .prefix-radius.row.collapse .prefix, form .row .prefix-radius.collapse.sc_home .prefix, form .sc_home .prefix-radius.collapse.sc_home .prefix {
+form .row .prefix-radius.row.collapse .prefix, form .sc_home .prefix-radius.row.collapse .prefix, form .about .prefix-radius.row.collapse .prefix, form .emage .prefix-radius.row.collapse .prefix, form .row .prefix-radius.collapse.sc_home .prefix, form .sc_home .prefix-radius.collapse.sc_home .prefix, form .about .prefix-radius.collapse.sc_home .prefix, form .emage .prefix-radius.collapse.sc_home .prefix, form .row .prefix-radius.collapse.about .prefix, form .sc_home .prefix-radius.collapse.about .prefix, form .about .prefix-radius.collapse.about .prefix, form .emage .prefix-radius.collapse.about .prefix, form .row .prefix-radius.collapse.emage .prefix, form .sc_home .prefix-radius.collapse.emage .prefix, form .about .prefix-radius.collapse.emage .prefix, form .emage .prefix-radius.collapse.emage .prefix {
   border-radius: 0;
   -webkit-border-bottom-left-radius: 3px;
   -webkit-border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
 }
-form .row .postfix-radius.row.collapse input, form .sc_home .postfix-radius.row.collapse input, form .row .postfix-radius.collapse.sc_home input, form .sc_home .postfix-radius.collapse.sc_home input,
+form .row .postfix-radius.row.collapse input, form .sc_home .postfix-radius.row.collapse input, form .about .postfix-radius.row.collapse input, form .emage .postfix-radius.row.collapse input, form .row .postfix-radius.collapse.sc_home input, form .sc_home .postfix-radius.collapse.sc_home input, form .about .postfix-radius.collapse.sc_home input, form .emage .postfix-radius.collapse.sc_home input, form .row .postfix-radius.collapse.about input, form .sc_home .postfix-radius.collapse.about input, form .about .postfix-radius.collapse.about input, form .emage .postfix-radius.collapse.about input, form .row .postfix-radius.collapse.emage input, form .sc_home .postfix-radius.collapse.emage input, form .about .postfix-radius.collapse.emage input, form .emage .postfix-radius.collapse.emage input,
 form .row .postfix-radius.row.collapse textarea,
 form .sc_home .postfix-radius.row.collapse textarea,
+form .about .postfix-radius.row.collapse textarea,
+form .emage .postfix-radius.row.collapse textarea,
 form .row .postfix-radius.collapse.sc_home textarea,
 form .sc_home .postfix-radius.collapse.sc_home textarea,
+form .about .postfix-radius.collapse.sc_home textarea,
+form .emage .postfix-radius.collapse.sc_home textarea,
+form .row .postfix-radius.collapse.about textarea,
+form .sc_home .postfix-radius.collapse.about textarea,
+form .about .postfix-radius.collapse.about textarea,
+form .emage .postfix-radius.collapse.about textarea,
+form .row .postfix-radius.collapse.emage textarea,
+form .sc_home .postfix-radius.collapse.emage textarea,
+form .about .postfix-radius.collapse.emage textarea,
+form .emage .postfix-radius.collapse.emage textarea,
 form .row .postfix-radius.row.collapse select,
 form .sc_home .postfix-radius.row.collapse select,
+form .about .postfix-radius.row.collapse select,
+form .emage .postfix-radius.row.collapse select,
 form .row .postfix-radius.collapse.sc_home select,
 form .sc_home .postfix-radius.collapse.sc_home select,
+form .about .postfix-radius.collapse.sc_home select,
+form .emage .postfix-radius.collapse.sc_home select,
+form .row .postfix-radius.collapse.about select,
+form .sc_home .postfix-radius.collapse.about select,
+form .about .postfix-radius.collapse.about select,
+form .emage .postfix-radius.collapse.about select,
+form .row .postfix-radius.collapse.emage select,
+form .sc_home .postfix-radius.collapse.emage select,
+form .about .postfix-radius.collapse.emage select,
+form .emage .postfix-radius.collapse.emage select,
 form .row .postfix-radius.row.collapse button,
 form .sc_home .postfix-radius.row.collapse button,
+form .about .postfix-radius.row.collapse button,
+form .emage .postfix-radius.row.collapse button,
 form .row .postfix-radius.collapse.sc_home button,
-form .sc_home .postfix-radius.collapse.sc_home button {
+form .sc_home .postfix-radius.collapse.sc_home button,
+form .about .postfix-radius.collapse.sc_home button,
+form .emage .postfix-radius.collapse.sc_home button,
+form .row .postfix-radius.collapse.about button,
+form .sc_home .postfix-radius.collapse.about button,
+form .about .postfix-radius.collapse.about button,
+form .emage .postfix-radius.collapse.about button,
+form .row .postfix-radius.collapse.emage button,
+form .sc_home .postfix-radius.collapse.emage button,
+form .about .postfix-radius.collapse.emage button,
+form .emage .postfix-radius.collapse.emage button {
   border-radius: 0;
   -webkit-border-bottom-left-radius: 3px;
   -webkit-border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
 }
-form .row .postfix-radius.row.collapse .postfix, form .sc_home .postfix-radius.row.collapse .postfix, form .row .postfix-radius.collapse.sc_home .postfix, form .sc_home .postfix-radius.collapse.sc_home .postfix {
+form .row .postfix-radius.row.collapse .postfix, form .sc_home .postfix-radius.row.collapse .postfix, form .about .postfix-radius.row.collapse .postfix, form .emage .postfix-radius.row.collapse .postfix, form .row .postfix-radius.collapse.sc_home .postfix, form .sc_home .postfix-radius.collapse.sc_home .postfix, form .about .postfix-radius.collapse.sc_home .postfix, form .emage .postfix-radius.collapse.sc_home .postfix, form .row .postfix-radius.collapse.about .postfix, form .sc_home .postfix-radius.collapse.about .postfix, form .about .postfix-radius.collapse.about .postfix, form .emage .postfix-radius.collapse.about .postfix, form .row .postfix-radius.collapse.emage .postfix, form .sc_home .postfix-radius.collapse.emage .postfix, form .about .postfix-radius.collapse.emage .postfix, form .emage .postfix-radius.collapse.emage .postfix {
   border-radius: 0;
   -webkit-border-bottom-right-radius: 3px;
   -webkit-border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
 }
-form .row .prefix-round.row.collapse input, form .sc_home .prefix-round.row.collapse input, form .row .prefix-round.collapse.sc_home input, form .sc_home .prefix-round.collapse.sc_home input,
+form .row .prefix-round.row.collapse input, form .sc_home .prefix-round.row.collapse input, form .about .prefix-round.row.collapse input, form .emage .prefix-round.row.collapse input, form .row .prefix-round.collapse.sc_home input, form .sc_home .prefix-round.collapse.sc_home input, form .about .prefix-round.collapse.sc_home input, form .emage .prefix-round.collapse.sc_home input, form .row .prefix-round.collapse.about input, form .sc_home .prefix-round.collapse.about input, form .about .prefix-round.collapse.about input, form .emage .prefix-round.collapse.about input, form .row .prefix-round.collapse.emage input, form .sc_home .prefix-round.collapse.emage input, form .about .prefix-round.collapse.emage input, form .emage .prefix-round.collapse.emage input,
 form .row .prefix-round.row.collapse textarea,
 form .sc_home .prefix-round.row.collapse textarea,
+form .about .prefix-round.row.collapse textarea,
+form .emage .prefix-round.row.collapse textarea,
 form .row .prefix-round.collapse.sc_home textarea,
 form .sc_home .prefix-round.collapse.sc_home textarea,
+form .about .prefix-round.collapse.sc_home textarea,
+form .emage .prefix-round.collapse.sc_home textarea,
+form .row .prefix-round.collapse.about textarea,
+form .sc_home .prefix-round.collapse.about textarea,
+form .about .prefix-round.collapse.about textarea,
+form .emage .prefix-round.collapse.about textarea,
+form .row .prefix-round.collapse.emage textarea,
+form .sc_home .prefix-round.collapse.emage textarea,
+form .about .prefix-round.collapse.emage textarea,
+form .emage .prefix-round.collapse.emage textarea,
 form .row .prefix-round.row.collapse select,
 form .sc_home .prefix-round.row.collapse select,
+form .about .prefix-round.row.collapse select,
+form .emage .prefix-round.row.collapse select,
 form .row .prefix-round.collapse.sc_home select,
 form .sc_home .prefix-round.collapse.sc_home select,
+form .about .prefix-round.collapse.sc_home select,
+form .emage .prefix-round.collapse.sc_home select,
+form .row .prefix-round.collapse.about select,
+form .sc_home .prefix-round.collapse.about select,
+form .about .prefix-round.collapse.about select,
+form .emage .prefix-round.collapse.about select,
+form .row .prefix-round.collapse.emage select,
+form .sc_home .prefix-round.collapse.emage select,
+form .about .prefix-round.collapse.emage select,
+form .emage .prefix-round.collapse.emage select,
 form .row .prefix-round.row.collapse button,
 form .sc_home .prefix-round.row.collapse button,
+form .about .prefix-round.row.collapse button,
+form .emage .prefix-round.row.collapse button,
 form .row .prefix-round.collapse.sc_home button,
-form .sc_home .prefix-round.collapse.sc_home button {
+form .sc_home .prefix-round.collapse.sc_home button,
+form .about .prefix-round.collapse.sc_home button,
+form .emage .prefix-round.collapse.sc_home button,
+form .row .prefix-round.collapse.about button,
+form .sc_home .prefix-round.collapse.about button,
+form .about .prefix-round.collapse.about button,
+form .emage .prefix-round.collapse.about button,
+form .row .prefix-round.collapse.emage button,
+form .sc_home .prefix-round.collapse.emage button,
+form .about .prefix-round.collapse.emage button,
+form .emage .prefix-round.collapse.emage button {
   border-radius: 0;
   -webkit-border-bottom-right-radius: 1000px;
   -webkit-border-top-right-radius: 1000px;
   border-bottom-right-radius: 1000px;
   border-top-right-radius: 1000px;
 }
-form .row .prefix-round.row.collapse .prefix, form .sc_home .prefix-round.row.collapse .prefix, form .row .prefix-round.collapse.sc_home .prefix, form .sc_home .prefix-round.collapse.sc_home .prefix {
+form .row .prefix-round.row.collapse .prefix, form .sc_home .prefix-round.row.collapse .prefix, form .about .prefix-round.row.collapse .prefix, form .emage .prefix-round.row.collapse .prefix, form .row .prefix-round.collapse.sc_home .prefix, form .sc_home .prefix-round.collapse.sc_home .prefix, form .about .prefix-round.collapse.sc_home .prefix, form .emage .prefix-round.collapse.sc_home .prefix, form .row .prefix-round.collapse.about .prefix, form .sc_home .prefix-round.collapse.about .prefix, form .about .prefix-round.collapse.about .prefix, form .emage .prefix-round.collapse.about .prefix, form .row .prefix-round.collapse.emage .prefix, form .sc_home .prefix-round.collapse.emage .prefix, form .about .prefix-round.collapse.emage .prefix, form .emage .prefix-round.collapse.emage .prefix {
   border-radius: 0;
   -webkit-border-bottom-left-radius: 1000px;
   -webkit-border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
   border-top-left-radius: 1000px;
 }
-form .row .postfix-round.row.collapse input, form .sc_home .postfix-round.row.collapse input, form .row .postfix-round.collapse.sc_home input, form .sc_home .postfix-round.collapse.sc_home input,
+form .row .postfix-round.row.collapse input, form .sc_home .postfix-round.row.collapse input, form .about .postfix-round.row.collapse input, form .emage .postfix-round.row.collapse input, form .row .postfix-round.collapse.sc_home input, form .sc_home .postfix-round.collapse.sc_home input, form .about .postfix-round.collapse.sc_home input, form .emage .postfix-round.collapse.sc_home input, form .row .postfix-round.collapse.about input, form .sc_home .postfix-round.collapse.about input, form .about .postfix-round.collapse.about input, form .emage .postfix-round.collapse.about input, form .row .postfix-round.collapse.emage input, form .sc_home .postfix-round.collapse.emage input, form .about .postfix-round.collapse.emage input, form .emage .postfix-round.collapse.emage input,
 form .row .postfix-round.row.collapse textarea,
 form .sc_home .postfix-round.row.collapse textarea,
+form .about .postfix-round.row.collapse textarea,
+form .emage .postfix-round.row.collapse textarea,
 form .row .postfix-round.collapse.sc_home textarea,
 form .sc_home .postfix-round.collapse.sc_home textarea,
+form .about .postfix-round.collapse.sc_home textarea,
+form .emage .postfix-round.collapse.sc_home textarea,
+form .row .postfix-round.collapse.about textarea,
+form .sc_home .postfix-round.collapse.about textarea,
+form .about .postfix-round.collapse.about textarea,
+form .emage .postfix-round.collapse.about textarea,
+form .row .postfix-round.collapse.emage textarea,
+form .sc_home .postfix-round.collapse.emage textarea,
+form .about .postfix-round.collapse.emage textarea,
+form .emage .postfix-round.collapse.emage textarea,
 form .row .postfix-round.row.collapse select,
 form .sc_home .postfix-round.row.collapse select,
+form .about .postfix-round.row.collapse select,
+form .emage .postfix-round.row.collapse select,
 form .row .postfix-round.collapse.sc_home select,
 form .sc_home .postfix-round.collapse.sc_home select,
+form .about .postfix-round.collapse.sc_home select,
+form .emage .postfix-round.collapse.sc_home select,
+form .row .postfix-round.collapse.about select,
+form .sc_home .postfix-round.collapse.about select,
+form .about .postfix-round.collapse.about select,
+form .emage .postfix-round.collapse.about select,
+form .row .postfix-round.collapse.emage select,
+form .sc_home .postfix-round.collapse.emage select,
+form .about .postfix-round.collapse.emage select,
+form .emage .postfix-round.collapse.emage select,
 form .row .postfix-round.row.collapse button,
 form .sc_home .postfix-round.row.collapse button,
+form .about .postfix-round.row.collapse button,
+form .emage .postfix-round.row.collapse button,
 form .row .postfix-round.collapse.sc_home button,
-form .sc_home .postfix-round.collapse.sc_home button {
+form .sc_home .postfix-round.collapse.sc_home button,
+form .about .postfix-round.collapse.sc_home button,
+form .emage .postfix-round.collapse.sc_home button,
+form .row .postfix-round.collapse.about button,
+form .sc_home .postfix-round.collapse.about button,
+form .about .postfix-round.collapse.about button,
+form .emage .postfix-round.collapse.about button,
+form .row .postfix-round.collapse.emage button,
+form .sc_home .postfix-round.collapse.emage button,
+form .about .postfix-round.collapse.emage button,
+form .emage .postfix-round.collapse.emage button {
   border-radius: 0;
   -webkit-border-bottom-left-radius: 1000px;
   -webkit-border-top-left-radius: 1000px;
   border-bottom-left-radius: 1000px;
   border-top-left-radius: 1000px;
 }
-form .row .postfix-round.row.collapse .postfix, form .sc_home .postfix-round.row.collapse .postfix, form .row .postfix-round.collapse.sc_home .postfix, form .sc_home .postfix-round.collapse.sc_home .postfix {
+form .row .postfix-round.row.collapse .postfix, form .sc_home .postfix-round.row.collapse .postfix, form .about .postfix-round.row.collapse .postfix, form .emage .postfix-round.row.collapse .postfix, form .row .postfix-round.collapse.sc_home .postfix, form .sc_home .postfix-round.collapse.sc_home .postfix, form .about .postfix-round.collapse.sc_home .postfix, form .emage .postfix-round.collapse.sc_home .postfix, form .row .postfix-round.collapse.about .postfix, form .sc_home .postfix-round.collapse.about .postfix, form .about .postfix-round.collapse.about .postfix, form .emage .postfix-round.collapse.about .postfix, form .row .postfix-round.collapse.emage .postfix, form .sc_home .postfix-round.collapse.emage .postfix, form .about .postfix-round.collapse.emage .postfix, form .emage .postfix-round.collapse.emage .postfix {
   border-radius: 0;
   -webkit-border-bottom-right-radius: 1000px;
   -webkit-border-top-right-radius: 1000px;
@@ -3926,7 +4428,7 @@ label.error {
     float: none;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.0625em) {
   .icon-bar.large-vertical {
     height: 100%;
     width: auto;
@@ -3996,7 +4498,7 @@ label.error {
     width: auto;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.0625em) {
   .icon-bar.two-up.large-vertical .item {
     width: auto;
   }
@@ -4012,7 +4514,7 @@ label.error {
     width: auto;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.0625em) {
   .icon-bar.three-up.large-vertical .item {
     width: auto;
   }
@@ -4028,7 +4530,7 @@ label.error {
     width: auto;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.0625em) {
   .icon-bar.four-up.large-vertical .item {
     width: auto;
   }
@@ -4044,7 +4546,7 @@ label.error {
     width: auto;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.0625em) {
   .icon-bar.five-up.large-vertical .item {
     width: auto;
   }
@@ -4060,7 +4562,7 @@ label.error {
     width: auto;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.0625em) {
   .icon-bar.six-up.large-vertical .item {
     width: auto;
   }
@@ -4076,7 +4578,7 @@ label.error {
     width: auto;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.0625em) {
   .icon-bar.seven-up.large-vertical .item {
     width: auto;
   }
@@ -4092,7 +4594,7 @@ label.error {
     width: auto;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.0625em) {
   .icon-bar.eight-up.large-vertical .item {
     width: auto;
   }
@@ -4996,7 +5498,7 @@ ul.pagination li {
     min-height: 100vh;
   }
 }
-.reveal-modal .column, .reveal-modal .columns, .reveal-modal .fixed_nav .nav_container, .fixed_nav .reveal-modal .nav_container, .reveal-modal .fixed_footer .contact, .fixed_footer .reveal-modal .contact {
+.reveal-modal .column, .reveal-modal .columns, .reveal-modal .fixed_nav .nav_container, .fixed_nav .reveal-modal .nav_container, .reveal-modal .fixed_footer .contact, .fixed_footer .reveal-modal .contact, .reveal-modal .about_left, .reveal-modal .about_right {
   min-width: 0;
 }
 .reveal-modal > :first-child {
@@ -5759,7 +6261,7 @@ meta.foundation-mq-topbar {
   margin-bottom: 0;
   list-style: none;
 }
-.top-bar .row, .fixed_nav .nav_container .top_bar .row, .top-bar .sc_home, .fixed_nav .nav_container .top_bar .sc_home {
+.top-bar .row, .fixed_nav .nav_container .top_bar .row, .top-bar .sc_home, .fixed_nav .nav_container .top_bar .sc_home, .top-bar .about, .fixed_nav .nav_container .top_bar .about, .top-bar .emage, .fixed_nav .nav_container .top_bar .emage {
   max-width: none;
 }
 .top-bar form, .fixed_nav .nav_container .top_bar form,
@@ -6351,7 +6853,7 @@ meta.foundation-mq-topbar {
   text-align: right !important;
 }
 
-.text-center {
+.text-center, .about_left {
   text-align: center !important;
 }
 
@@ -6393,7 +6895,7 @@ meta.foundation-mq-topbar {
     text-align: justify !important;
   }
 }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+@media only screen and (min-width: 40.063em) and (max-width: 61.0625em) {
   .medium-only-text-left {
     text-align: left !important;
   }
@@ -6427,7 +6929,7 @@ meta.foundation-mq-topbar {
     text-align: justify !important;
   }
 }
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+@media only screen and (min-width: 61.0625em) and (max-width: 90em) {
   .large-only-text-left {
     text-align: left !important;
   }
@@ -6444,7 +6946,7 @@ meta.foundation-mq-topbar {
     text-align: justify !important;
   }
 }
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.0625em) {
   .large-text-left {
     text-align: left !important;
   }
@@ -6570,13 +7072,13 @@ a img {
 p {
   font-family: inherit;
   font-weight: normal;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility;
 }
 p.lead {
-  font-size: 1.21875rem;
+  font-size: 1.15625rem;
   line-height: 1.6;
 }
 p aside {
@@ -6590,7 +7092,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #222222;
+  color: #FFFFFF;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -6598,7 +7100,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
-  color: #6f6f6f;
+  color: white;
   line-height: 0;
 }
 
@@ -6628,7 +7130,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: #6f6f6f;
+  color: white;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
@@ -6675,7 +7177,7 @@ code {
 ul,
 ol,
 dl {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
   margin-bottom: 1.25rem;
   list-style-position: outside;
@@ -6765,20 +7267,20 @@ blockquote {
 blockquote cite {
   display: block;
   font-size: 0.8125rem;
-  color: #555555;
+  color: white;
 }
 blockquote cite:before {
   content: "\2014 \0020";
 }
 blockquote cite a,
 blockquote cite a:visited {
-  color: #555555;
+  color: white;
 }
 
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #6f6f6f;
+  color: white;
 }
 
 /* Microformats */
@@ -7413,7 +7915,7 @@ ul.off-canvas-list li a:hover {
   }
 }
 /* large displays */
-@media only screen and (min-width: 64.063em) {
+@media only screen and (min-width: 61.0625em) {
   .hide-for-small-only, .show-for-small-up, .hide-for-small, .hide-for-small-down, .hide-for-medium-only, .show-for-medium-up, .hide-for-medium, .hide-for-medium-down, .show-for-large-only, .show-for-large-up, .show-for-large, .show-for-large-down, .hide-for-xlarge-only, .hide-for-xlarge-up, .hide-for-xlarge, .show-for-xlarge-down, .hide-for-xxlarge-only, .hide-for-xxlarge-up, .hide-for-xxlarge, .show-for-xxlarge-down {
     display: inherit !important;
   }
@@ -7875,11 +8377,11 @@ th.hide-for-touch {
 }
 .fixed_nav {
   background: #FFFFFF;
-  padding: 1.0625rem 0;
+  padding: 0.5rem 0;
 }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+@media only screen and (min-width: 40.063em) and (max-width: 61.0625em) {
   .fixed_nav {
-    padding: 1.0625rem 0 0 0;
+    padding: 0.5rem 0 0 0;
   }
 }
 @media only screen and (max-width: 28.125em) {
@@ -7887,8 +8389,8 @@ th.hide-for-touch {
     padding: 0;
   }
 }
-.fixed_nav .row, .fixed_nav .sc_home {
-  max-width: 65rem;
+.fixed_nav .row, .fixed_nav .sc_home, .fixed_nav .about, .fixed_nav .emage {
+  max-width: 63rem;
 }
 @media only screen and (max-width: 40em) {
   .fixed_nav .nav_container {
@@ -7899,6 +8401,15 @@ th.hide-for-touch {
 .fixed_nav .name a {
   padding: 0 !important;
 }
+.fixed_nav .nav_links {
+  margin-left: -0.9375rem;
+  float: right;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 61.0625em) {
+  .fixed_nav .nav_links {
+    float: left;
+  }
+}
 .fixed_nav h1 {
   font-family: "Oswald", Helvetica, Roboto, Arial, sans-serif;
   margin: 0;
@@ -7906,12 +8417,12 @@ th.hide-for-touch {
 }
 @media only screen and (min-width: 40.063em) {
   .fixed_nav h1 {
-    font-size: 3rem !important;
+    font-size: 1.8rem !important;
   }
 }
 @media only screen and (max-width: 40em) {
   .fixed_nav h1 {
-    font-size: 35px !important;
+    font-size: 1.7rem !important;
     letter-spacing: .3rem;
   }
 }
@@ -7930,9 +8441,17 @@ th.hide-for-touch {
 }
 .fixed_footer .contact {
   margin: 0;
-  padding-top: 0.3125rem;
+  padding-top: 0.1875rem;
 }
-@media only screen and (max-width: 64em) {
+@media only screen and (min-width: 40.063em) and (max-width: 61.0625em) {
+  .fixed_footer .contact {
+    padding-left: 14px !important;
+  }
+}
+.fixed_footer .contact li {
+  font-size: .9rem;
+}
+@media only screen and (max-width: 40em) {
   .fixed_footer .contact li {
     text-align: center;
   }
@@ -7945,22 +8464,13 @@ th.hide-for-touch {
 .fixed_footer .contact li a {
   color: #222222;
 }
-.fixed_footer .contact li:nth-child(1) {
-  font-size: 1.4rem;
-}
 @media only screen and (max-width: 28.125em) {
   .fixed_footer .contact li:nth-child(1) {
     font-size: .9rem !important;
   }
 }
-.fixed_footer .contact li:nth-child(2) {
-  font-size: 1rem;
-}
-.fixed_footer .contact li:nth-child(3) {
-  font-size: 1.1rem;
-}
 .fixed_footer .footer-height {
-  height: 5.8125rem;
+  height: 4.4375rem;
 }
 @media only screen and (max-width: 25em) {
   .fixed_footer .footer-height {
@@ -7970,19 +8480,24 @@ th.hide-for-touch {
 .fixed_footer .social {
   height: 100%;
 }
-.fixed_footer .social a {
-  padding: 2rem 1.25rem;
-}
 @media only screen and (max-width: 25em) {
   .fixed_footer .social a {
-    padding: 1rem;
+    padding-top: 15px;
   }
 }
 
-.sc_home img {
-  margin-top: 2.4375rem;
+.sc_home {
+  z-index: 2;
 }
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+.sc_home .img_contain {
+  z-index: 2;
+  box-shadow: 1px 0 120px 40px #000000;
+}
+.sc_home img {
+  width: 100%;
+  margin-top: 3.8125rem;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 61.0625em) {
   .sc_home img {
     margin-top: 6.25rem;
   }
@@ -7993,10 +8508,127 @@ th.hide-for-touch {
   }
 }
 
+.opaque_white {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .breakpoints {
   position: fixed;
   left: 0;
   top: 100px;
+}
+
+.sc {
+  padding: 3em 0;
+  background: #333;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.sc__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.sc__title {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+
+figure[data-type=quote] {
+  font-family: inherit !important;
+  padding-left: 0 !important;
+  border: none !important;
+}
+figure[data-type=quote] blockquote {
+  padding-top: 0 !important;
+  letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 61.0625em) {
+  .about {
+    margin-top: 4.375rem;
+    margin-bottom: 4.375rem;
+  }
+}
+@media only screen and (min-width: 40.063em) and (max-width: 61.0625em) {
+  .about {
+    margin-bottom: 4.375rem;
+    margin-top: 6.5625rem;
+  }
+}
+@media only screen and (max-width: 40em) {
+  .about {
+    margin-top: 2.5rem;
+    margin-bottom: 10rem;
+  }
+}
+.about h6 {
+  margin-top: .7rem;
+  font-size: .9375rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 5px;
+}
+.about h3 {
+  background: rgba(255, 255, 255, 0.1);
+  padding-left: 51.5%;
+}
+@media only screen and (max-width: 40em) {
+  .about h3 {
+    padding: 0;
+  }
+}
+.about h5 {
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.about hr {
+  border: solid rgba(255, 255, 255, 0.3);
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 0 0 0.3125rem 0;
+  height: 0;
+  border-style: dashed;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 61.0625em) {
+  .about_left {
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width: 40.063em) {
+  .about_left {
+    padding-top: 2%;
+  }
+}
+
+@media only screen and (min-width: 61.0625em) {
+  .emage {
+    margin-top: 4.375rem;
+    margin-bottom: 4.375rem;
+  }
+}
+@media only screen and (min-width: 40.063em) and (max-width: 61.0625em) {
+  .emage {
+    margin-bottom: 4.375rem;
+    margin-top: 6.5625rem;
+  }
+}
+@media only screen and (max-width: 40em) {
+  .emage {
+    margin-top: 2.5rem;
+    margin-bottom: 10rem;
+  }
+}
+.emage .embedly-embed {
+  width: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */

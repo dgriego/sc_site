@@ -1,0 +1,75 @@
+figure[data-type=quote] {
+    font-family: $paragraph-font-family !important;
+    padding-left: 0 !important;
+    border: none !important;
+
+    blockquote {
+        padding-top: 0 !important;
+        letter-spacing: 1px;
+    }
+}
+
+.about {
+    @extend .row;
+    @media #{$large-up} {
+        margin-top: rem-calc(70);
+        margin-bottom: rem-calc(70);
+    }
+    @media #{$medium-only} {
+        margin-bottom: rem-calc(70);
+        margin-top: rem-calc(105);
+    }
+    @media #{$small-only} {
+        margin-top: rem-calc(40);
+        margin-bottom: rem-calc(160);
+    }
+
+    h6 {
+        margin-top: .7rem;
+        font-size: .9375rem;
+        background: rgba(255, 255, 255, .1);
+        border: 1px solid rgba(255, 255, 255, .3);
+        padding: 5px;
+    }
+
+    h3 {
+        background: rgba(255, 255, 255, .1);
+        padding-left: 51.5%;
+        @media #{$small-only} {
+            padding: 0;
+        }
+    }
+
+    h5 {
+        letter-spacing: 1px;
+        font-weight: $font-weight-bold;
+    }
+
+    hr {
+        border: solid rgba(255, 255, 255, .3);
+        border-width: 1px 0 0;
+        clear: both;
+        margin: rem-calc(0 0 5 0);
+        height: 0;
+        border-style: dashed;
+    }
+
+    &_left {
+        @extend .large-6;
+        @extend .medium-6;
+        @extend .columns;
+        @extend .text-center;
+        @media #{$medium-only} {
+            padding-right: 0;
+        }
+        @media #{$medium-up} {
+            padding-top: 2%;
+        }
+    }
+
+    &_right {
+        @extend .large-6;
+        @extend .medium-6;
+        @extend .columns;
+    }
+}

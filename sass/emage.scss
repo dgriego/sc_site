@@ -1,19 +1,37 @@
-.emage {
+.testimonials {
     @extend .row;
     @media #{$large-up} {
-        margin-top: rem-calc(70);
+        padding-top: rem-calc(70);
         margin-bottom: rem-calc(70);
     }
     @media #{$medium-only} {
         margin-bottom: rem-calc(70);
-        margin-top: rem-calc(105);
+        padding-top: rem-calc(105);
     }
     @media #{$small-only} {
-        margin-top: rem-calc(40);
+        padding-top: rem-calc(40);
         margin-bottom: rem-calc(160);
     }
 
-    .embedly-embed {
-        width: 100%;
+    .article {
+        border-bottom: 1px solid rgba(255,255,255, .3);
+        margin-bottom: 15px;
+        padding: 25px;
+    }
+
+    .article:first-child {
+        border-top: 1px solid rgba(255,255,255, .3);
+    }
+
+    .right_on_med {
+        @media #{$medium-only} {
+            float: right !important;
+        }
+    }
+
+    .article_row {
+        @media #{$medium-only} {
+            padding-right: rem-calc(24);
+        }
     }
 }

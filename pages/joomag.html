@@ -1,0 +1,16 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %} - {{ cms.joomag.name }}{% endblock %}
+{% block content %}
+<div class="joomag">
+  <div class="row">
+    <div class="large-12 medium-12 columns large-centered magazine">
+      <iframe src="http://www.joomag.com/en/newsstand/emage-magazine-issue-1/0809674001402084795"
+              height="100%"
+              width="100%"
+              frameborder="0"
+              id="joomag">You need an iframes capable browser to view this content.
+      </iframe>
+    </div>
+  </div>
+</div>
+{% endblock %}

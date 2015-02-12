@@ -1,34 +1,6 @@
-{# ------------------------------------------------------- #}
-{# ONE OFF VIEW emage #}
-{# This page can use any data from http:localhost:2000/cms/#/form/emage/ #}
-{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
-{# http://paularmstrong.github.io/swig/docs/tags/ #}
-{# Learn about calling data into Webhook pages here: #}
-{# http://www.webhook.com/docs/template-rules-and-filters/ #}
-{# ------------------------------------------------------- #}
-{# Confused what extends and blocks do? Watch a primer: #}
-{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
 {% extends "templates/partials/base.html" %}
-{# This sets our page <title>. It will append this emage's name to the site title defined in base.html #}
 {% block title %}{% parent %} - {{ cms.emage.name }}{% endblock %}
 {% block content %}
-  <!-- <h1>{{ cms.emage.name }}</h1> -->
-  <!-- <ul>
-      <li>
-        <strong>Name: </strong>
-        {{ cms.emage.name }}
-      </li>
-      <li>
-        <strong>main text: </strong>
-        {{ cms.emage.main_text|safe }}
-      </li>
-      <li>
-        <strong>Embed.ly: </strong>
-        {# Embed.ly content usually comes with more data. Info here: #}
-{# http://www.webhook.com/docs/widget-template-reference/#embedly #}
-{{ cms.emage.embedly.html|safe  }}
-      </li>
-  </ul> -->
 <div class="emage">
   <div class="row">
     <div class="large-10 medium-10 columns large-centered test">
@@ -37,9 +9,7 @@
   </div>
   <div class="row">
     <div id="bookshelf" class="large-10 medium-12 large-centered columns">
-      <!-- {{ cms.emage.embedly.html|safe  }} -->
-      <!-- <iframe
-src="http://www.joomag.com/en/newsstand/emage-magazine-issue-1/0809674001402084795" height="100%" width="100%" frameborder="0" scrolling="no" id="joomag" class="joomag">You need an iframes capable browser to view this content.</iframe> -->
+      {{ cms.emage.embedly.html|safe  }}
     </div>
   </div>
 </div>

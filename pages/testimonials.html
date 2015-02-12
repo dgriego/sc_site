@@ -1,0 +1,49 @@
+{# ------------------------------------------------------- #}
+{# ONE OFF VIEW testimonials #}
+{# This page can use any data from http:localhost:2000/cms/#/form/testimonials/ #}
+{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
+{# http://paularmstrong.github.io/swig/docs/tags/ #}
+{# Learn about calling data into Webhook pages here: #}
+{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+{# ------------------------------------------------------- #}
+{# Confused what extends and blocks do? Watch a primer: #}
+{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+{% extends "templates/partials/base.html" %}
+{# This sets our page <title>. It will append this testimonials's name to the site title defined in base.html #}
+{% block title %}{% parent %} - {{ cms.testimonials.name }}{% endblock %}
+{% block content %}
+<div class="testimonials">
+
+  <div class="large-4 medium-11 large-uncentered medium-centered columns">
+    <div class="row article_row">
+      <div class="large-11 medium-12 columns article">
+        {{ cms.testimonials.article1|safe }}
+      </div>
+    </div>
+  </div>
+
+  <div class="large-4 medium-6 columns">
+    <div class="row article_row">
+      <div class="medium-11 columns article right_on_med">
+        {{ cms.testimonials.article3|safe }}
+      </div>
+      <div class="medium-11 columns article right_on_med">
+        {{ cms.testimonials.article4|safe }}
+      </div>
+      <div class="medium-11 left columns article right_on_med">
+        {{ cms.testimonials.article2|safe }}
+      </div>
+    </div>
+  </div>
+  <div class="large-4 medium-6 columns">
+    <div class="row">
+      <div class="medium-11 columns article">
+        {{ cms.testimonials.article5|safe }}
+      </div>
+      <div class="medium-11 left columns article">
+        {{ cms.testimonials.article6|safe }}
+      </div>
+    </div>
+      </div>
+</div>
+{% endblock %}

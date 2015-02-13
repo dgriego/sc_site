@@ -7,6 +7,7 @@
   @import url(http://fonts.googleapis.com/css?family=Raleway:700,100,400,300);
 
 // app styles
+  @import "sc_globals";
   @import "nav";
   @import "footer";
   @import "home";
@@ -14,3 +15,5 @@
   @import "emage";
   @import "joomag";
   @import "testimonials";
+  @import "contact";
+  @import "books";

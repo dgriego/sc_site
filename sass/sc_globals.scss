@@ -1,0 +1,26 @@
+@mixin vertical_align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.vertical_align {
+    @include vertical_align;
+}
+
+.sc_wrapper {
+    @extend .row;
+    @include vertical_align;
+}
+
+@mixin vertical_align_left {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
+}

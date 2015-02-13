@@ -1,0 +1,7 @@
+.contact {
+    @extend .sc_wrapper;
+
+    textarea {
+        height: 200px;
+    }
+}

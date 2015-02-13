@@ -1,8 +1,7 @@
-.testimonials {
+.emage {
     @extend .row;
     @media #{$large-up} {
-        padding-top: rem-calc(70);
-        margin-bottom: rem-calc(70);
+        @include vertical_align;
     }
     @media #{$medium-only} {
         margin-bottom: rem-calc(70);
@@ -13,25 +12,26 @@
         margin-bottom: rem-calc(160);
     }
 
-    .article {
-        border-bottom: 1px solid rgba(255,255,255, .3);
-        margin-bottom: 15px;
-        padding: 25px;
-    }
-
-    .article:first-child {
-        border-top: 1px solid rgba(255,255,255, .3);
-    }
-
-    .right_on_med {
-        @media #{$medium-only} {
-            float: right !important;
+    .embedly-embed {
+        width: 100%;
+        height: 444px;
+        @media #{$small-down} {
+            height: 223px;
         }
     }
 
-    .article_row {
-        @media #{$medium-only} {
-            padding-right: rem-calc(24);
+    p, figure, blockquote {
+        margin: 0;
+    }
+
+    p {
+        margin-bottom: 10px !important;
+        @media #{$small-down} {
+            padding: 20px;
         }
+    }
+
+    figure {
+        margin-bottom: 0 !important;
     }
 }

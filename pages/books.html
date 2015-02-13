@@ -1,0 +1,14 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %} - {{ cms.books.name }}{% endblock %}
+{% block content %}
+<div class="books">
+  <div class="row">
+    <div class="large-12 medium-10 columns">
+        <!-- {{ cms.books.embedly.html|safe }} -->
+    </div>
+    <!-- <div class="large-6 medium-10 columns">
+        {{ cms.books.books1|safe }}
+    </div> -->
+  </div>
+</div>
+{% endblock %}

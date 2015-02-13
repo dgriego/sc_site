@@ -15,11 +15,33 @@
                 </ul>
                 <section class="top-bar-section">
                     <ul class="nav_links">
-                        <li><a href="/">ABOUT</a></li>
-                        <li><a href="/home/">EMAGE MAGAZINE</a></li>
-                        <li><a href="#">TESTIMONIALS</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                        <li><a href="#">BOOKS</a></li>
+                        <li class="has-dropdown">
+                          <a href="#">ABOUT</a>
+                          <ul class="dropdown">
+                            <li><a href="/biography">BIOGRAPHY</a></li>
+                            <li><a href="/publicist">PUBLICIST</a></li>
+                            <li><a href="/professionaladvisor">PROFESSIONAL ADVISOR</a></li>
+                          </ul>
+                        </li>
+                        <li class="has-dropdown">
+                          <a href="#">EMAGE</a>
+                          <ul class="dropdown">
+                            <li><a href="/emage">EMAGE MAGAZINE&trade;</a></li>
+                            <li><a href="/joomag">JOOMAG</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="/testimonials">TESTIMONIALS</a></li>
+                        <li><a href="/contact">CONTACT</a></li>
+                        <li class="has-dropdown">
+                          <a href="#">BOOKS</a>
+                          <ul class="dropdown">
+                            <li class="book_link">
+                                <a href="#">
+                                    {{ cms.books.books1|safe }}
+                                </a>
+                            </li>
+                          </ul>
+                        </li>
                         <li><a href="#">LEGAL</a></li>
                     </ul>
                 </section>

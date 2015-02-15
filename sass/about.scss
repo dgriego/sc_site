@@ -65,6 +65,10 @@ figure[data-type=quote] {
         @media #{$medium-up} {
             padding-top: 2%;
         }
+
+        img {
+            width: 75%;
+        }
     }
 
     &_right {

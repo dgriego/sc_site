@@ -6400,7 +6400,7 @@ label.error {
   color: #FFFFFF;
 }
 .icon-bar > a:hover {
-  background: #008CBA;
+  background: rgba(255, 194, 194, 0.3);
 }
 .icon-bar > a:hover label {
   color: #FFFFFF;
@@ -10477,6 +10477,24 @@ th.hide-for-touch {
     padding-top: 15px;
   }
 }
+.fixed_footer .social > * {
+  padding: 1.35rem;
+}
+.fixed_footer .social .item:first-child:hover {
+  background: #1884bb !important;
+}
+.fixed_footer .social .item:nth-child(2):hover {
+  background: #e02927 !important;
+}
+.fixed_footer .social .item:nth-child(3):hover {
+  background: #43609c !important;
+}
+.fixed_footer .social .item:nth-child(4):hover {
+  background: #bd1e23 !important;
+}
+.fixed_footer .social .item:nth-child(5):hover {
+  background: #0084b4 !important;
+}
 .fixed_footer .copyright {
   color: black;
   position: absolute;
@@ -10610,6 +10628,9 @@ figure[data-type=quote] blockquote {
   .about_left {
     padding-top: 2%;
   }
+}
+.about_left img {
+  width: 75%;
 }
 
 @media only screen and (min-width: 61.0625em) {

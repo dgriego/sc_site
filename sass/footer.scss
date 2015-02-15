@@ -54,6 +54,30 @@
                 padding-top: 15px;
             }
         }
+
+        > * {
+            padding: 1.35rem;
+        }
+
+        .item:first-child:hover {
+            background: rgb(24, 132, 187) !important;
+        }
+
+        .item:nth-child(2):hover {
+            background: rgb(224, 41, 39) !important;
+        }
+
+        .item:nth-child(3):hover {
+            background: rgb(67, 96, 156) !important;
+        }
+
+        .item:nth-child(4):hover {
+            background: rgb(189, 30, 35) !important;
+        }
+
+        .item:nth-child(5):hover {
+            background: rgb(0, 132, 180) !important;
+        }
     }
 
     .copyright {

@@ -10827,7 +10827,7 @@ figure[data-type=quote] blockquote {
   position: relative;
   z-index: 2600;
   max-width: none;
-  padding: 70px 0 20px;
+  padding: 70px 0 70px;
 }
 @media only screen and (min-width: 40.063em) and (max-width: 61.0625em) {
   .emage {

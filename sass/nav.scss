@@ -1,7 +1,8 @@
 .fixed_nav {
-    @extend .fixed;
+    position: fixed;
+    z-index: 5000;
     background: $white;
-    padding: rem-calc(8 0);
+    width: 100%;
     @media #{$medium-only} {
         padding: rem-calc(8 0 0 0);
     }
@@ -10,7 +11,7 @@
     }
 
     .row {
-        max-width: 63rem;
+        max-width: 67rem;
     }
 
     .nav_container {
@@ -31,19 +32,23 @@
     }
 
     .nav_links {
-        margin-left: -0.9375rem;
-        float: right;
         @media #{$medium-only} {
             float: left;
+        }
+
+        li:first-child {
+            @media #{$large-only} {
+                margin-left: 20px;
+            }
         }
     }
 
     h1 {
         font-family: $font-header;
         margin: 0;
-        letter-spacing: 1rem;
+        letter-spacing: 5px;
         @media #{$medium-up} {
-            font-size: 1.8rem !important;
+            font-size: 2rem !important;
         }
         @media #{$small-only} {
             font-size: 1.7rem !important;

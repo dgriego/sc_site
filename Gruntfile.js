@@ -44,6 +44,12 @@ module.exports = function(grunt) {
                          src: ['font-awesome.min.css', 'font-awesome.css.map'],
                          dest: 'static/css/'},
         ]
+      },
+      slick: {
+        files: [
+          {expand: true, cwd: 'bower_components/slick.js/slick/', src: ['slick.min.js'], dest: 'static/javascript/'},
+          {expand: true, cwd: 'bower_components/slick.js/slick/', src: ['slick.css'], dest: 'static/css/'}
+        ]
       }
     },
     // Watch for sass changes and build css using the sass task we set above

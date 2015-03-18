@@ -1,7 +1,26 @@
 {% extends "templates/partials/base.html" %}
 {% block title %}{% parent %} - {{ cms.biography.name }}{% endblock %}
 {% block content %}
-  <div class="about">
+{% set pa = cms.professionaladvisor %}
+
+<div class="about_row row">
+  <div class="large-3 columns">
+      <img src="{{ cms.biography.image|imageSize(auto) }}" />
+  </div>
+  <div class="large-9 columns">
+      <h2>About Steven Cuoco</h2>
+      <h6 class="subheader hide-for-small-only">{{ cms.biography.quote }}</h6>
+  </div>
+</div>
+<div class="about_row row">
+  <div class="large-4 columns">{{ cms.biography.main_text|safe }}</div>
+  <div class="large-4 columns">
+    <h2>PROFESSIONAL ADVISOR</h2>
+    {{ pa.main_text|safe }}
+  </div>
+  <div class="large-4 columns">{{ cms.publicist.main_text|safe }}</div>
+</div>
+  <!-- <div class="about">
     <div class="about_left">
       <img src="{{ cms.biography.image|imageSize(auto) }}" />
       <h6 class="subheader hide-for-small-only">{{ cms.biography.quote }}</h6>
@@ -13,5 +32,5 @@
     <div class="about_right">
       {{ cms.biography.main_text|safe }}
     </div>
-  </div>
+  </div> -->
 {% endblock %}

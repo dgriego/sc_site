@@ -1,14 +1,58 @@
 .books {
     @extend .row;
-    @media #{$large-up} {
-        @include vertical_align;
-    }
+    position: relative;
+    z-index: 2600;
+    max-width: none;
+    padding: 70px 0 100px;
+    // @media #{$large-up} {
+    //     @include vertical_align;
+    // }
     @media #{$medium-only} {
-        margin-bottom: rem-calc(70);
+        // margin-bottom: rem-calc(70);
         padding-top: rem-calc(105);
     }
     @media #{$small-only} {
         padding-top: rem-calc(40);
         margin-bottom: rem-calc(160);
     }
+    @media #{$small-down} {
+        padding-bottom: 80px;
+        margin: 0;
+    }
+
+    .embedly-embed {
+        width: 100%;
+        height: 444px;
+        @media #{$small-down} {
+            height: 223px;
+        }
+    }
+
+    p, figure, blockquote {
+        margin: 0;
+    }
+
+    p {
+        margin-bottom: 10px !important;
+        @media #{$small-down} {
+            padding: 20px;
+        }
+    }
+
+    figure {
+        margin-bottom: 0 !important;
+    }
+
+    .fx_settings {
+        @media #{$large-only} {
+            padding-bottom: 39.5%;
+        }
+    }
+}
+
+.no-margin {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }

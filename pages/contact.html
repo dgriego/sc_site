@@ -3,6 +3,20 @@
 {% block title %}{% parent %} - {{ cms.contact.name }}{% endblock %}
 {% block content %}
 <div class="contact">
+  <div class="large-6 medium-12 small-12 columns text-left contact_info">
+    <h5>Contact Steven Cuoco</h5>
+    <ul class="no-bullet">
+        <li>Phone :
+          <a href="tel:908-329-5131"> 908-329-5131</a></li>
+        <li>Info :
+          <a target="_blank"
+               href="mailto:{{cms.home.email}}"> {{cms.home.email}}</a></li>
+        <li>General Inquiries :
+          <a target="_blank"
+               href="mailto:{{cms.home.general_inquiries}}"> {{cms.home.general_inquiries}}</a>
+        </li>
+    </ul>
+  </div>
   <div class="large-6 medium-12 columns">
   <form accept-charset="UTF-8"
         action="https://formkeep.com/f/866a077f654a"
@@ -12,7 +26,7 @@
     <input type="text" name="name" placeholder="Your Name" required>
     <textarea type="text" name="message"
               placeholder="Comments or Questions are Welcome!" required></textarea>
-    <button type="submit">Send</button>
+    <button type="submit">Submit</button>
   </form>
   </div>
 </div>

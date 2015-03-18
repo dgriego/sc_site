@@ -1,0 +1,28 @@
+.media_kit {
+    @extend .row;
+    position: relative;
+    z-index: 1999;
+    max-width: none;
+    background: rgba(255, 255, 255, 0.9);
+    @media #{$large-up} {
+        padding-top: 4.375rem;
+        // padding-bottom: 6.375rem;
+    }
+    @media #{$medium-only} {
+        // margin-bottom: rem-calc(70);
+        padding-top: rem-calc(60);
+    }
+    @media #{$small-down} {
+        padding-top: rem-calc(40);
+    }
+
+    .magazine {
+        overflow: hidden;
+    }
+
+    #media_kit {
+        width: 100%;
+        margin-top: rem-calc(-52);
+        height: 42rem;
+    }
+}

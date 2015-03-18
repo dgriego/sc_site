@@ -1,62 +1,26 @@
 .fixed_footer {
     @extend .fixed;
+    z-index: 6000;
     background: $white;
     bottom: 0;
     top: inherit;
     font-family: Arial, sans-serif;
-
-    .footer_contact {
-        @extend .large-6;
-        @extend .medium-6;
-        @extend .columns;
-        @extend .no-bullet;
-        margin: 0;
-        padding-top: rem-calc(3);
-        @media #{$medium-only} {
-            padding-left: 14px !important;
-        }
-
-        li {
-            font-size: .9rem;
-            @media #{$small-down} {
-                text-align: center;
-            }
-            @media #{$tiny-down} {
-                font-size: .8rem !important;
-            }
-        }
-
-        li a {
-            color: $jet;
-        }
-
-        li:nth-child(1) {
-            @media #{$tiny-down} {
-                font-size: .9rem !important;
-            }
-        }
+    height: 46px;
+    @media #{$medium-only} {
+        height: 62px;
+    }
+    @media #{$small-down} {
+        height: 77px;
     }
 
-    .footer-height {
-        height: rem-calc(71);
-        @media #{$xtiny-down} {
-            height: rem-calc(60);
-        }
+    .no_padding {
+        padding: 0;
     }
 
     .social {
-        height: 100%;
-
-        a {
-            // padding: 2rem 1.25rem;
-            @media #{$xtiny-down} {
-                // padding: 1rem;
-                padding-top: 15px;
-            }
-        }
 
         > * {
-            padding: 1.35rem;
+            padding: .5rem;
         }
 
         .item:first-child:hover {
@@ -89,8 +53,14 @@
     }
 
     .cp_text {
-        position: relative;
-        left: 30%;
+        // position: relative;
+        // left: 10%;
+        font-size: .7rem;
+        color: black;
+        bottom: -30px;
+        @media #{$medium-down} {
+            bottom: 0;
+        }
     }
 }
 

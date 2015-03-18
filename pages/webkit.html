@@ -1,0 +1,11 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %}{% endblock %}
+{% block content %}
+<div class="media_kit">
+  <div class="row">
+    <div class="large-12 medium-12 columns large-centered magazine">
+      {{ cms.webkit.webkit|safe }}
+    </div>
+  </div>
+</div>
+{% endblock %}

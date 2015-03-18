@@ -1,15 +1,25 @@
 .emage {
     @extend .row;
-    @media #{$large-up} {
-        @include vertical_align;
-    }
+    position: relative;
+    z-index: 2600;
+    max-width: none;
+    padding: 70px 0 20px;
+    // @media #{$large-up} {
+    //     @include vertical_align;
+    // }
     @media #{$medium-only} {
-        margin-bottom: rem-calc(70);
-        padding-top: rem-calc(105);
+        margin-bottom: 0;
+        // padding-top: rem-calc(105);
+        // height: 723px;
+        padding-bottom: 50px;
     }
     @media #{$small-only} {
         padding-top: rem-calc(40);
         margin-bottom: rem-calc(160);
+    }
+    @media #{$small-down} {
+        padding: 0;
+        margin: 0;
     }
 
     .embedly-embed {
@@ -34,4 +44,21 @@
     figure {
         margin-bottom: 0 !important;
     }
+
+    .fx_settings {
+        @media #{$large-only} {
+            padding-bottom: 45.5%;
+        }
+
+        @media #{$medium-only} {
+            padding-bottom: 55.5%;
+        }
+    }
+}
+
+.no-margin {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }

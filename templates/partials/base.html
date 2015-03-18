@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="/static/css/foundation-icons.css"/>
     <link rel="stylesheet" href="/static/css/wysiwyg_figures.css"/>
     <link rel="stylesheet" href="/static/css/fontello.css"/>
+    <link rel="stylesheet" href="/static/css/slick.css"/>
     <!-- endbuild -->
 
     <link rel="stylesheet" href="/static/css/font-awesome.min.css"/>
@@ -51,6 +52,7 @@
     {% block head_extra %}{% endblock %}
   </head>
   <body>
+    <div class="layer"></div>
     {% block body %}
       <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -69,11 +71,15 @@
 
       <!-- Our image to be blurred -->
       <img data-canvas-image style="display: none" src="{{ cms.home.image|imageSize(auto) }}">
+      <img data-canvas-image-two style="display: none" src="{{ cms.home.image|imageSize(auto) }}">
+      <img data-canvas-image-three style="display: none" src="{{ cms.home.image|imageSize(auto) }}">
+      <img data-canvas-image-four style="display: none" src="{{ cms.home.image|imageSize(auto) }}">
 
       {# Foundation JS #}
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
       <script src="/static/javascript/foundation/vendor/fastclick.js"></script>
       <script src="/static/javascript/foundation/foundation.min.js"></script>
+      <script src="/static/javascript/slick.min.js"></script>
 
       {# Put your JS in here and we'll minify it into one file. No CDN scripts. More info: #}
       {# http://www.webhook.com/docs/minify-your-js-and-css/ #}

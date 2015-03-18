@@ -1,17 +1,28 @@
 .joomag {
     @extend .row;
-    @media #{$large-up} {
-        padding-top: rem-calc(70);
-        margin-bottom: rem-calc(70);
-    }
+    position: relative;
+    height: 898px;
+    z-index: 1999;
+    max-width: none;
+    background: rgba(255, 255, 255, 0.9);
     @media #{$medium-only} {
-        margin-bottom: rem-calc(70);
-        padding-top: rem-calc(105);
+        padding: 50px 0;
+        height: auto;
     }
-    @media #{$small-only} {
-        padding-top: rem-calc(40);
-        margin-bottom: rem-calc(160);
+
+    .row {
+        @media #{$large-up} {
+            padding: 4rem 6rem 7rem 6rem;
+        }
     }
+    // @media #{$medium-only} {
+    //     margin-bottom: rem-calc(70);
+    //     padding-top: rem-calc(105);
+    // }
+    // @media #{$small-only} {
+    //     padding-top: rem-calc(40);
+    //     margin-bottom: rem-calc(160);
+    // }
 
     .magazine {
         overflow: hidden;
@@ -20,6 +31,8 @@
     #joomag {
         width: 100%;
         margin-top: rem-calc(-220);
-        height: 53rem;
+        height: 59rem;
     }
+
+    @extend .hide-for-small-down;
 }

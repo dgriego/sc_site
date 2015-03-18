@@ -4,9 +4,166 @@
 {% block content %}
 
   <div class="sc_home small-collapse">
-    <div class="large-8 medium-11 small-12 columns medium-centered img_contain">
-    <img src="{{ cms.home.image|imageSize(700) }}" />
+    <div class="large-5 columns caption_container">
+      <h2 class="caption">PROFESSIONAL ADVISOR</h2>
+      <h4 class="sub_caption">"Setting the stage while the spot light is on you"</h4>
     </div>
+    <div class="large-7 medium-12 small-12 columns large-centered image_container">
+      <img src="{{ cms.home.image|imageSize(auto) }}" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="test large-12 columns"></div>
+    <div class="test_text large-12 columns"></div>
+  </div>
+
+  <div class="media_kit">
+    <div class="row no-margin">
+      <div class="large-11 medium-12 columns large-centered magazine">
+        {{ cms.webkit.webkit|safe }}
+      </div>
+    </div>
+  </div>
+
+  <div class="emage">
+    <div class="sc2">
+        <canvas class="sc__background" id="scCanvas2" width="150" height="150" data-canvas-two></canvas>
+      </div>
+    <div class="row no-margin">
+      <div class="large-10 medium-10 columns large-centered medium-centered">
+        {{ cms.emage.main_text|safe }}
+      </div>
+    </div>
+    <div class="row no-margin">
+      <div id="bookshelf" class="large-10 medium-12 large-centered columns">
+        <div class="flex-video fx_settings">
+          {{ cms.emage.embedly.html|safe  }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="joomag">
+    <!-- <div class="sc3">
+      <canvas class="sc__background" id="scCanvas3" width="150" height="150" data-canvas-three></canvas>
+    </div> -->
+
+    <div class="row no-margin">
+      <div class="large-12 medium-12 columns large-centered magazine">
+        <iframe src="http://www.joomag.com/en/newsstand/emage-magazine-issue-1/0809674001402084795"
+                height="100%"
+                width="100%"
+                frameborder="0"
+                id="joomag">You need an iframes capable browser to view this content.
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  {% set pa = cms.professionaladvisor %}
+  <div class="about_row">
+    <div class="sc4">
+      <canvas class="sc__background" id="scCanvas4" width="150" height="150" data-canvas-four></canvas>
+    </div>
+
+    <div class="row headline">
+      <div class="large-3 medium-3 columns">
+          <img src="{{ cms.biography.image|imageSize(auto) }}" />
+      </div>
+      <div class="large-9 medium-9 columns">
+          <h2 class="bio_mainheader">ABOUT STEVEN CUOCO</h2>
+          <h6 class="subheader">{{ cms.biography.quote }}</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns bio_text">{{ cms.biography.main_text|safe }}</div>
+      <div class="large-12 columns no-padding">
+        <h2 class="bio_subheader">PROFESSIONAL ADVISOR</h2>
+        <div class="bio_text">{{ pa.main_text|safe }}</div>
+      </div>
+      <div class="large-12 columns no-padding">
+        <h2 class="bio_subheader">PUBLICIST</h2>
+        <div class="bio_text">{{ cms.publicist.main_text|safe }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonials">
+    <h2 class="subheader home_header">TESTIMONIALS</h2>
+    <div class="medium-12 large-centered medium-centered columns">
+      <div class="row no-margin">
+        <div class="large-12 medium-12 columns article">
+          {{ cms.testimonials.article1|safe }}
+        </div>
+      </div>
+    </div>
+
+    <div class="medium-6 columns">
+      <div class="row article_row no-margin">
+        <div class="medium-12 columns article right_on_med">
+          {{ cms.testimonials.article3|safe }}
+        </div>
+        <div class="medium-12 columns article right_on_med">
+          {{ cms.testimonials.article4|safe }}
+        </div>
+        <div class="medium-12 left columns article right_on_med">
+          {{ cms.testimonials.article2|safe }}
+        </div>
+      </div>
+    </div>
+    <div class="medium-6 columns">
+      <div class="row no-margin">
+        <div class="medium-12 columns article">
+          {{ cms.testimonials.article5|safe }}
+        </div>
+        <div class="medium-12 left columns article">
+          {{ cms.testimonials.article6|safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="books">
+    <div class="sc3">
+      <canvas class="sc__background" id="scCanvas3" width="150" height="150" data-canvas-three></canvas>
+    </div>
+
+    <div class="row no-margin">
+      <div class="large-12 medium-12 columns large-centered">
+        {{ cms.books.books1|safe }}
+      </div>
+    </div>
+  </div>
+
+  <div class="large-12 columns contact_background">
+    <div class="contact">
+    <div class="large-6 medium-12 small-12 columns text-left contact_info">
+      <h5>Contact Steven Cuoco</h5>
+      <ul class="no-bullet">
+          <li>Phone :
+            <a href="tel:908-329-5131"> 908-329-5131</a></li>
+          <li>Info :
+            <a target="_blank"
+                 href="mailto:{{cms.home.email}}"> {{cms.home.email}}</a></li>
+          <li>General Inquiries :
+            <a target="_blank"
+                 href="mailto:{{cms.home.general_inquiries}}"> {{cms.home.general_inquiries}}</a>
+          </li>
+      </ul>
+    </div>
+    <div class="large-6 medium-12 columns">
+    <form accept-charset="UTF-8"
+          action="https://formkeep.com/f/866a077f654a"
+          method="POST">
+      <input type="hidden" name="utf8" value="✓">
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <textarea type="text" name="message"
+                placeholder="Comments or Questions are Welcome!" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    </div>
+  </div>
   </div>
 
   <!-- KEEP THIS -->

@@ -7,19 +7,48 @@ or: stackBlurCanvasRGB( targetCanvasID, top_x, top_y, width, height, radius );
 //--// StackBlur image background
 $(function() {
   // Change this value to adjust the amount of blur
-  var BLUR_RADIUS = 20;
+  var BLUR_RADIUS;
+  if(location.pathname === '/') {
+    BLUR_RADIUS = 20;
+  } else {
+    BLUR_RADIUS = 20;
+  }
 
   var canvas = document.querySelector('[data-canvas]');
+  var canvas2 = document.querySelector('[data-canvas-two]');
+  var canvas3 = document.querySelector('[data-canvas-three]');
+  var canvas4 = document.querySelector('[data-canvas-four]');
   var canvasContext = canvas.getContext('2d');
+  var canvasContext2 = canvas2.getContext('2d');
+  var canvasContext3 = canvas3.getContext('2d');
+  var canvasContext4 = canvas4.getContext('2d');
 
   var image = new Image();
+  var image2 = new Image();
+  var image3 = new Image();
+  var image4 = new Image();
   image.src = document.querySelector('[data-canvas-image]').src;
+  image2.src = document.querySelector('[data-canvas-image-two]').src;
+  image3.src = document.querySelector('[data-canvas-image-three]').src;
+  image4.src = document.querySelector('[data-canvas-image-four]').src;
 
   var drawBlur = function() {
     var w = canvas.width;
+    var w2 = canvas2.width;
+    var w3 = canvas3.width;
+    var w4 = canvas4.width;
     var h = canvas.height;
+    var h2 = canvas2.height;
+    var h3 = canvas3.height;
+    var h4 = canvas4.height;
     canvasContext.drawImage(image, 0, 0, w, h);
+    canvasContext2.drawImage(image2, 0, 0, w2, h2);
+    canvasContext3.drawImage(image3, 0, 0, w3, h3);
+    canvasContext4.drawImage(image4, 0, 0, w4, h4);
     stackBlurCanvasRGBA('scCanvas', 0, 0, w, h, BLUR_RADIUS);
+    stackBlurCanvasRGBA('scCanvas2', 0, 0, w2, h2, BLUR_RADIUS);
+    stackBlurCanvasRGBA('scCanvas3', 0, 0, w3, h3, BLUR_RADIUS);
+    stackBlurCanvasRGBA('scCanvas4', 0, 0, w4, h4, BLUR_RADIUS);
   };
 
   image.onload = function() {
@@ -29,57 +58,30 @@ $(function() {
   $('joomag').onload = function() {
     $('joomag').find('j-header').css('display', 'none');
   }
+
+  $('.your-class').slick({adaptiveHeight: true});
+
+  //set margin height for homePage image if window height
+  //is large than 877
+  // resizeImage();
+
+  // $(window).resize(function() {
+  //   resizeImage();
+  // });
 });
 
-//--// CONTACT FORM
-// $(function() {
-//     // Get the form.
-//     var form = $('#ajax-contact');
-
-//     // Get the messages div.
-//     var formMessages = $('#form-messages');
-
-//     $(form).submit(function(event) {
-//         // Stop the browser from submitting the form.
-//         event.preventDefault();
-
-//         // Serialize the form data.
-//         var formData = $(form).serialize();
-
-//         // Submit the form using AJAX.
-//         $.ajax({
-//             type: 'POST',
-//             url: $(form).attr('action'),
-//             data: formData
-//         }).done(function(response) {
-//             // Make sure that the formMessages div has the 'success' class.
-//             $(formMessages).removeClass('error');
-//             $(formMessages).addClass('success');
-
-//             // Set the message text.
-//             $(formMessages).text(response);
-
-//             // Clear the form.
-//             $('#name').val('');
-//             $('#email').val('');
-//             $('#message').val('');
-//         }).fail(function(data) {
-//             // Make sure that the formMessages div has the 'error' class.
-//             $(formMessages).removeClass('success');
-//             $(formMessages).addClass('error');
-
-//             // Set the message text.
-//             if (data.responseText !== '') {
-//                 $(formMessages).text(data.responseText);
-//             } else {
-//                 $(formMessages).text('Oops! An error occured and your message could not be sent.');
-//             }
-//         });
-//     });
-// });
-
-
-//--// Alternative method for extracting the images with embed.ly
+// function resizeImage() {
+//   var nav = $('.fixed_nav');
+//   var window_height = window.outerHeight;
+//   if(window_height > 877 && nav[0].clientHeight < 95) {
+//     $('.sc_home').css('margin-top', '45px');
+//   } else if(nav[0].clientHeight >= 90) {
+//     $('.sc_home').css('margin-top', '90px');
+//   } else {
+//     $('.sc_home').css('margin-top', '0');
+//   }
+// }
+// // Alternative method for extracting the images with embed.ly
 // var response;
 // $('<hr>').insertAfter('.about h5');
 // $.ajax({

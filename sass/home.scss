@@ -1,23 +1,154 @@
+body {
+  height: auto !important;
+// background-color: #121212;
+// background-image: url(http://www.transparenttextures.com/patterns/dark-stripes.png);
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+//   background-color: #000000;
+// background-image: url(http://www.transparenttextures.com/patterns/subtle-dots.png);
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.home_header {
+  color: #328DA5;
+  padding-left: 30px;
+
+  @media #{$small-down} {
+    padding-left: rem-calc(14);
+  }
+}
+
+.about_row {
+  position: relative;
+  z-index: 1999;
+  max-width: none;
+  padding-bottom: 60px;
+  // color: black;
+  // background: white;
+
+  .bio_text {
+    background: rgba(255, 255, 255, .1);
+    padding: 12px;
+    @media #{$medium-only} {
+      padding: 35px;
+    }
+
+    p {
+      font-size: 13px;
+      margin-bottom: .5rem;
+    }
+  }
+
+  .headline {
+    padding: 40px 0 15px 0;
+  }
+
+  .no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .bio_subheader {
+    margin-top: 36px;
+    color: #328DA5;
+    background: rgba(0, 0, 0, .1);
+    @media #{$medium-only} {
+      padding-left: 30px;
+    }
+  }
+
+  .bio_mainheader {
+    color: #328DA5;
+  }
+}
+
+.layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // background-image: url(http://www.transparenttextures.com/patterns/subtle-dots.png);
+  background-image: url(http://www.transparenttextures.com/patterns/dark-stripes.png);
+  background-repeat: repeat;
+  z-index: 1500;
+  opacity: .6;
+}
+
 .sc_home {
-    @extend .row;
-    z-index: 2;
+  position: fixed;
+  @extend .row;
+  z-index: 2;
+  max-width: none;
+  @media #{$large-only} {
+    margin-top: 45px;
+  }
+  @media #{$medium-only} {
+    margin-top: 90px;
+  }
+  @media #{$small-down} {
+    margin-top: 47px;
+  }
 
     .img_contain {
         z-index: 2;
         box-shadow: 1px 0 120px 40px #000000;
     }
 
-
     img {
         width: 100%;
-        margin-top: rem-calc(61);
-        @media #{$medium-only} {
-            margin-top: rem-calc(100);
-        }
-        @media #{$small-only} {
-            margin-top: rem-calc(45);
-        }
     }
+}
+
+.image_container {
+  // @media #{$large-only} {
+  //   margin-top: 31px;
+  // }
+}
+
+.test {
+  height: 897px;
+  @media #{$small-down} {
+    height: 32rem;
+  }
+}
+
+.caption_container {
+  position: absolute;
+  left: 10%;
+  min-height: 500px;
+
+  @media #{$small-down} {
+    left: 0;
+  }
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 469px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background: rgba(255, 255, 255, .1);
+  padding: 5px 5px 5px 10px;
+  font-family: "Oswald", Helvetica, Roboto, Arial, sans-serif;
+  z-index: 1000;
+  letter-spacing: 5px;
+
+  @media #{$small-down} {
+    bottom: 5rem;
+  }
+}
+
+.sub_caption {
+  position: absolute;
+  bottom: -48px;
+  width: 469px;
+  padding: 5px 5px 5px 10px;
+  font-family: "Oswald", Helvetica, Roboto, Arial, sans-serif;
+  z-index: 1000;
+  @media #{$small-down} {
+    bottom: 2.625rem;
+  }
 }
 
 .opaque_white {
@@ -31,6 +162,81 @@
 }
 
 .sc {
+  padding: 3em 0;
+  background: #333;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  &__title {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.sc2 {
+  padding: 3em 0;
+  background: #333;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  &__title {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.sc3 {
+  padding: 3em 0;
+  background: #333;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  &__title {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.sc4 {
   padding: 3em 0;
   background: #333;
   position: absolute;

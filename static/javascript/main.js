@@ -68,7 +68,25 @@ $(function() {
   // $(window).resize(function() {
   //   resizeImage();
   // });
+  resizeDiv();
+
+  window.onresize = function(event) {
+    resizeDiv();
+  }
 });
+
+// $(document).ready(function(){
+//   resizeDiv();
+// });
+
+
+
+function resizeDiv() {
+  vpw = $(window).width();
+  vph = $(window).height();
+  $('.window_height').css({'height': vph + 'px'});
+  // $('.window_height').css({'width': vpw + 'px'});
+}
 
 // function resizeImage() {
 //   var nav = $('.fixed_nav');

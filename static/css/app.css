@@ -10908,6 +10908,7 @@ figure[data-type=quote] blockquote {
 }
 .joomag .magazine {
   overflow: hidden;
+  padding: 0;
 }
 .joomag #joomag {
   width: 100%;

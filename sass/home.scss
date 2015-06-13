@@ -1,11 +1,81 @@
 body {
   height: auto !important;
+  background: url('../images/bg1.jpg');
+  line-height: 1 !important;
 // background-color: #121212;
 // background-image: url(http://www.transparenttextures.com/patterns/dark-stripes.png);
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 //   background-color: #000000;
 // background-image: url(http://www.transparenttextures.com/patterns/subtle-dots.png);
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.no_padding {
+  padding: 0 !important;
+}
+
+.privacy_policy_overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(2, 2, 2, 0.8);
+  height: 100%;
+  z-index: 50000;
+}
+
+.policy_header {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.privacy_policy_text {
+  width: 48%;
+  margin: 10% auto;
+  border: 6px solid white;
+  height: 500px;
+  background: rgba(255,255,255, .8);
+  overflow: hidden;
+  color: black;
+  padding: 0 25px 15px 25px;
+  overflow-y: scroll;
+}
+
+.terms_and_conditions_overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(2, 2, 2, 0.8);
+  height: 100%;
+  z-index: 50000;
+}
+
+.t_and_d_header {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.t_and_d_text {
+  width: 48%;
+  margin: 10% auto;
+  border: 6px solid white;
+  height: 500px;
+  background: rgba(255,255,255, .8);
+  overflow: hidden;
+  color: black;
+  padding: 0 25px 15px 25px;
+  overflow-y: scroll;
+}
+
+.terms_and_conditions_overlay {
+  display: none;
 }
 
 .home_header {
@@ -17,29 +87,94 @@ body {
   }
 }
 
+.testimonials_header {
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 13px;
+}
+
+.watch_text {
+  text-align: center;
+  margin-bottom: 5px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.small_joomag_container {
+  border: 6px solid white;
+  padding: 10px;
+}
+
+.sc_home_box {
+  border: 9px solid white;
+  height: 80%;
+  margin-top: 90px;
+  background: url('../images/steven-cuoco.png');
+  background-size: 62%;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: bottom;
+}
+
+.philosophy_title {
+  color: rgb(53, 142, 186);
+}
+
+.philosophy_text {
+  line-height: 1 !important;
+  font-size: 12px;
+}
+
 .about_row {
   position: relative;
   z-index: 1999;
   max-width: none;
   padding-bottom: 60px;
+  background: $white;
   // color: black;
   // background: white;
 
   .bio_text {
     background: rgba(255, 255, 255, .1);
     padding: 12px;
+    color: #000000;
     @media #{$medium-only} {
       padding: 35px;
     }
 
-    p {
+    h5 {
+      color: #000000;
+      font-weight: bold;
       font-size: 13px;
+    }
+
+    p {
+      font-size: 12px;
       margin-bottom: .5rem;
     }
   }
 
   .headline {
     padding: 40px 0 15px 0;
+    max-width: 55rem;
+  }
+
+  .about_text_small {
+    p {
+      font-size: 12px;
+      color: #000000;
+    }
+  }
+
+  .sub_quote {
+    font-size: 15px;
+    margin-top: -10px;
+    margin-bottom: 17px;
+    color: #000000;
+  }
+
+  .about_row_width {
+    max-width: 50rem;
   }
 
   .no-padding {
@@ -48,9 +183,9 @@ body {
   }
 
   .bio_subheader {
-    margin-top: 36px;
-    color: #328DA5;
-    background: rgba(0, 0, 0, .1);
+    color: #328DA5 !important;
+    font-size: 1.3rem !important;
+    font-weight: normal !important;
     @media #{$medium-only} {
       padding-left: 30px;
     }
@@ -75,18 +210,19 @@ body {
 }
 
 .sc_home {
-  position: fixed;
+  // position: fixed;
+  height: 683px;
   @extend .row;
   z-index: 2;
   max-width: none;
   @media #{$large-only} {
-    margin-top: 45px;
+    // margin-top: 45px;
   }
   @media #{$medium-only} {
-    margin-top: 90px;
+    // margin-top: 90px;
   }
   @media #{$small-down} {
-    margin-top: 47px;
+    // margin-top: 47px;
   }
 
     .img_contain {
@@ -114,7 +250,6 @@ body {
 
 .caption_container {
   position: absolute;
-  left: 10%;
   min-height: 500px;
 
   @media #{$small-down} {
@@ -128,9 +263,9 @@ body {
   width: 469px;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
+  font-family: "Oswald", Helvetica, Roboto, Arial, sans-serif;
   background: rgba(255, 255, 255, .1);
   padding: 5px 5px 5px 10px;
-  font-family: "Oswald", Helvetica, Roboto, Arial, sans-serif;
   z-index: 1000;
   letter-spacing: 5px;
 
@@ -141,14 +276,20 @@ body {
 
 .sub_caption {
   position: absolute;
-  bottom: -48px;
+  bottom: 140px;
   width: 469px;
-  padding: 5px 5px 5px 10px;
-  font-family: "Oswald", Helvetica, Roboto, Arial, sans-serif;
+  padding: 5px 5px 5px 31px;
   z-index: 1000;
-  @media #{$small-down} {
-    bottom: 2.625rem;
-  }
+  font-size: 2.5rem;
+  line-height: 1 !important;
+}
+
+.sub_caption2 {
+  position: absolute;
+  bottom: 115px;
+  width: 469px;
+  padding: 5px 5px 5px 31px;
+  z-index: 1000;
 }
 
 .opaque_white {
@@ -163,7 +304,6 @@ body {
 
 .sc {
   padding: 3em 0;
-  background: #333;
   position: fixed;
   top: 0;
   height: 100%;
@@ -188,7 +328,6 @@ body {
 
 .sc2 {
   padding: 3em 0;
-  background: #333;
   position: absolute;
   top: 0;
   height: 100%;
@@ -213,7 +352,6 @@ body {
 
 .sc3 {
   padding: 3em 0;
-  background: #333;
   position: absolute;
   top: 0;
   height: 100%;
@@ -238,7 +376,6 @@ body {
 
 .sc4 {
   padding: 3em 0;
-  background: #333;
   position: absolute;
   top: 0;
   height: 100%;

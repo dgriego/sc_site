@@ -1,11 +1,12 @@
 .fixed_footer {
     @extend .fixed;
     z-index: 6000;
-    background: $white;
+    background: #000000;
     bottom: 0;
     top: inherit;
     font-family: Arial, sans-serif;
     height: 46px;
+    border-top: 1px solid white;
     @media #{$medium-only} {
         height: 62px;
     }
@@ -18,9 +19,14 @@
     }
 
     .social {
+        background: #000000 !important;
 
         > * {
             padding: .5rem;
+        }
+
+        > * i {
+            color: #696969 !important;
         }
 
         .item:first-child:hover {
@@ -45,19 +51,36 @@
     }
 
     .copyright {
-        color: black;
+        color: white;
         position: absolute;
         bottom: 0;
         font-size: .7rem;
         width: 100%;
     }
 
+    .cp_right {
+        color: rgb(53, 142, 186);
+    }
+
+    .privacy_policy {
+        font-weight: bold;
+        margin-right: 10px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .terms_and_conditions {
+        font-size: 10px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
     .cp_text {
         // position: relative;
         // left: 10%;
         font-size: .7rem;
-        color: black;
-        bottom: -30px;
+        color: #ffffff;
+        bottom: -17px;
         @media #{$medium-down} {
             bottom: 0;
         }

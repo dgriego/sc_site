@@ -3,10 +3,16 @@
     position: relative;
     z-index: 2600;
     max-width: none;
-    padding: 70px 0 70px;
+    padding: 20px 0 70px;
+    background: url('../images/pattern-bg1.jpg');
     // @media #{$large-up} {
     //     @include vertical_align;
     // }
+
+    #bookshelf {
+        margin-top: 10px;
+    }
+
     @media #{$medium-only} {
         margin-bottom: 0;
         // padding-top: rem-calc(105);

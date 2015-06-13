@@ -10,6 +10,10 @@
         padding: 0;
     }
 
+    > * a {
+        font-weight: bold !important;
+    }
+
     .row {
         max-width: 67rem;
     }
@@ -29,6 +33,7 @@
 
     .name a {
         padding: 0 !important;
+        font-weight: normal !important;
     }
 
     .nav_links {

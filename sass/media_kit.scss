@@ -3,7 +3,7 @@
     position: relative;
     z-index: 1999;
     max-width: none;
-    background: rgba(255, 255, 255, 0.9);
+    background: url('../images/pattern-bg1.jpg');
     @media #{$large-up} {
         padding-top: 4.375rem;
         // padding-bottom: 6.375rem;
@@ -16,8 +16,15 @@
         padding-top: rem-calc(40);
     }
 
+    .media_kit_text p {
+        font-size: 13px !important;
+        margin-bottom: 0 !important;
+        margin-right: 1.5rem !important;
+    }
+
     .magazine {
         overflow: hidden;
+        max-height: 686px !important;
     }
 
     #media_kit {

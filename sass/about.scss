@@ -6,23 +6,13 @@ figure[data-type=quote] {
     blockquote {
         padding-top: 0 !important;
         letter-spacing: 1px;
+        border: none !important;
+        color: #000000;
     }
 }
 
 .about {
     @extend .row;
-    @media #{$large-up} {
-        margin-top: rem-calc(70);
-        margin-bottom: rem-calc(70);
-    }
-    @media #{$medium-only} {
-        margin-bottom: rem-calc(70);
-        margin-top: rem-calc(105);
-    }
-    @media #{$small-only} {
-        margin-top: rem-calc(40);
-        margin-bottom: rem-calc(160);
-    }
 
     h6 {
         margin-top: .7rem;
@@ -43,6 +33,7 @@ figure[data-type=quote] {
     h5 {
         letter-spacing: 1px;
         font-weight: $font-weight-bold;
+        color: #000000 !important;
     }
 
     hr {

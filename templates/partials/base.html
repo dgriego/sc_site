@@ -70,10 +70,6 @@
       </div>
 
       <!-- Our image to be blurred -->
-      <img data-canvas-image style="display: none" src="{{ cms.home.image|imageSize(auto) }}">
-      <img data-canvas-image-two style="display: none" src="{{ cms.home.image|imageSize(auto) }}">
-      <img data-canvas-image-three style="display: none" src="{{ cms.home.image|imageSize(auto) }}">
-      <img data-canvas-image-four style="display: none" src="{{ cms.home.image|imageSize(auto) }}">
 
       {# Foundation JS #}
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -86,7 +82,6 @@
 
       <!-- build:js /static/javascript/minified.js -->
       <script src="/static/javascript/main.js"></script>
-      <script src="/static/javascript/stackBlur.js"></script>
       <!-- endbuild -->
 
       <script>
@@ -95,7 +90,6 @@
 
       {% block scripts_extra %}{% endblock %}
 
-      {# Google Analytics code. Feel free to remove. #}
       <script>
         var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

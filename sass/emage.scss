@@ -20,7 +20,7 @@
         padding-bottom: 50px;
     }
     @media #{$small-only} {
-        padding-top: rem-calc(40);
+        padding-top: rem-calc(40) !important;
         margin-bottom: rem-calc(160);
     }
     @media #{$small-down} {

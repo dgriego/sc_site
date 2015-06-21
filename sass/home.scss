@@ -42,6 +42,10 @@ body {
   color: black;
   padding: 0 25px 15px 25px;
   overflow-y: scroll;
+
+  @media #{$medium-down} {
+    width: 95%;
+  }
 }
 
 .terms_and_conditions_overlay {
@@ -72,6 +76,9 @@ body {
   color: black;
   padding: 0 25px 15px 25px;
   overflow-y: scroll;
+  @media #{$medium-down} {
+    width: 95%;
+  }
 }
 
 .terms_and_conditions_overlay {
@@ -114,6 +121,15 @@ body {
   background-repeat: no-repeat;
   background-position: right;
   background-position-y: bottom;
+
+  @media #{$medium-only} {
+    background-size: 500px;
+  }
+
+  @media #{$small-down} {
+    background-size: 447px;
+    height: 447px;
+  }
 }
 
 .philosophy_title {
@@ -209,6 +225,14 @@ body {
   opacity: .6;
 }
 
+.media_kit_row {
+  @media #{$medium-down} {
+    margin: 0 30px;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+  }
+}
+
 .sc_home {
   // position: fixed;
   height: 683px;
@@ -223,6 +247,7 @@ body {
   }
   @media #{$small-down} {
     // margin-top: 47px;
+    height: auto;
   }
 
     .img_contain {

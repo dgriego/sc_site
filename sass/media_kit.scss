@@ -6,14 +6,24 @@
     background: url('../images/pattern-bg1.jpg');
     @media #{$large-up} {
         padding-top: 4.375rem;
-        // padding-bottom: 6.375rem;
     }
     @media #{$medium-only} {
-        // margin-bottom: rem-calc(70);
         padding-top: rem-calc(60);
     }
     @media #{$small-down} {
         padding-top: rem-calc(40);
+    }
+
+    figure {
+        @media #{$small-down} {
+            margin: 0 !important;
+        }
+    }
+
+    .media_kit_text {
+        @media #{$small-down} {
+            margin-bottom: 20px !important;
+        }
     }
 
     .media_kit_text p {

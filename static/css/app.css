@@ -10367,7 +10367,7 @@ th.hide-for-touch {
   font-weight: bold !important;
 }
 .fixed_nav .row, .fixed_nav .sc_wrapper, .fixed_nav .sc_home, .fixed_nav .about, .fixed_nav .emage, .fixed_nav .joomag, .fixed_nav .media_kit, .fixed_nav .testimonials, .fixed_nav .contact, .fixed_nav .books {
-  max-width: 67rem;
+  max-width: 62rem;
 }
 @media only screen and (max-width: 40em) {
   .fixed_nav .nav_container {
@@ -10565,6 +10565,11 @@ body {
   padding: 0 25px 15px 25px;
   overflow-y: scroll;
 }
+@media only screen and (max-width: 61.0625em) {
+  .privacy_policy_text {
+    width: 95%;
+  }
+}
 
 .terms_and_conditions_overlay {
   display: none;
@@ -10594,6 +10599,11 @@ body {
   color: black;
   padding: 0 25px 15px 25px;
   overflow-y: scroll;
+}
+@media only screen and (max-width: 61.0625em) {
+  .t_and_d_text {
+    width: 95%;
+  }
 }
 
 .terms_and_conditions_overlay {
@@ -10637,6 +10647,17 @@ body {
   background-repeat: no-repeat;
   background-position: right;
   background-position-y: bottom;
+}
+@media only screen and (min-width: 40.063em) and (max-width: 61.0625em) {
+  .sc_home_box {
+    background-size: 500px;
+  }
+}
+@media only screen and (max-width: 40em) {
+  .sc_home_box {
+    background-size: 447px;
+    height: 447px;
+  }
 }
 
 .philosophy_title {
@@ -10721,10 +10742,23 @@ body {
   opacity: .6;
 }
 
+@media only screen and (max-width: 61.0625em) {
+  .media_kit_row {
+    margin: 0 30px;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+  }
+}
+
 .sc_home {
   height: 683px;
   z-index: 2;
   max-width: none;
+}
+@media only screen and (max-width: 40em) {
+  .sc_home {
+    height: auto;
+  }
 }
 .sc_home .img_contain {
   z-index: 2;
@@ -10964,7 +10998,7 @@ figure[data-type=quote] blockquote {
 }
 @media only screen and (max-width: 40em) {
   .emage {
-    padding-top: 2.5rem;
+    padding-top: 2.5rem !important;
     margin-bottom: 10rem;
   }
 }
@@ -11062,6 +11096,16 @@ figure[data-type=quote] blockquote {
 @media only screen and (max-width: 40em) {
   .media_kit {
     padding-top: 2.5rem;
+  }
+}
+@media only screen and (max-width: 40em) {
+  .media_kit figure {
+    margin: 0 !important;
+  }
+}
+@media only screen and (max-width: 40em) {
+  .media_kit .media_kit_text {
+    margin-bottom: 20px !important;
   }
 }
 .media_kit .media_kit_text p {

@@ -10367,13 +10367,21 @@ th.hide-for-touch {
   font-weight: bold !important;
 }
 .fixed_nav .row, .fixed_nav .sc_wrapper, .fixed_nav .sc_home, .fixed_nav .about, .fixed_nav .emage, .fixed_nav .joomag, .fixed_nav .media_kit, .fixed_nav .testimonials, .fixed_nav .contact, .fixed_nav .books {
-  max-width: 62rem;
+  max-width: 65rem;
 }
 @media only screen and (max-width: 40em) {
   .fixed_nav .nav_container {
     padding-left: 0.625rem;
     padding-right: 0.3125rem;
   }
+}
+.fixed_nav .payment_button {
+  background-color: white;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-size: 0.8125rem;
+  padding-bottom: 5px;
 }
 .fixed_nav .name a {
   padding: 0 !important;

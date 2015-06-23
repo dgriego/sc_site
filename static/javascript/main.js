@@ -17,6 +17,7 @@ $(function() {
          $target.selector === '#books' ||
          $target.selector === '#testimonials' ||
          $target.selector === '#pub' ||
+         $target.selector === '#media_kit_new' ||
          $target.selector === '#pa') {
         scroll_offset = $target.offset().top - 50;
       } else {

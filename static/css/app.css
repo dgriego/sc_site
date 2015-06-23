@@ -11124,6 +11124,7 @@ figure[data-type=quote] blockquote {
 .media_kit .magazine {
   overflow: hidden;
   max-height: 686px !important;
+  padding-top: 53px;
 }
 .media_kit #media_kit {
   width: 100%;

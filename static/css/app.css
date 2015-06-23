@@ -11091,11 +11091,6 @@ figure[data-type=quote] blockquote {
   max-width: none;
   background: url("../images/pattern-bg1.jpg");
 }
-@media only screen and (min-width: 61.0625em) {
-  .media_kit {
-    padding-top: 4.375rem;
-  }
-}
 @media only screen and (min-width: 40.063em) and (max-width: 61.0625em) {
   .media_kit {
     padding-top: 3.75rem;

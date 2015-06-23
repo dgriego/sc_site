@@ -4,9 +4,6 @@
     z-index: 1999;
     max-width: none;
     background: url('../images/pattern-bg1.jpg');
-    @media #{$large-up} {
-        padding-top: 4.375rem;
-    }
     @media #{$medium-only} {
         padding-top: rem-calc(60);
     }

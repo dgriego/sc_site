@@ -11120,6 +11120,7 @@ figure[data-type=quote] blockquote {
   overflow: hidden;
   max-height: 686px !important;
   padding-top: 53px;
+  margin-bottom: 20px;
 }
 .media_kit #media_kit {
   width: 100%;
